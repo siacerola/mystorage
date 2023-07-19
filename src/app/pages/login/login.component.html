@@ -9,14 +9,24 @@
         <h1 class="text-xl font-bold text-gray-900 leading-tight tracking-tight">
           Sign in to your account
         </h1>
-        <form class="space-y-6">
+        <form class="space-y-6" [formGroup]="loginForm" (submit)="onSubmit()">
           <div>
             <label for="email" class="block my-2 text-sm font-medium text-gray-900">Your email</label>
-            <input type="email" name="email" placeholder="name@email.com" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-slate-50 focus:border-slate-50 block w-full p-2.5">
+            <input formControlName="email" type="email" name="email" placeholder="name@email.com" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-slate-50 focus:border-slate-50 block w-full p-2.5">
+            <div *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched ">
+              <p class="text-red-500 m-2 text-xs">You must enter a value</p>
+            </div>
+            <div *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.touched ">
+              <p class="text-red-500 m-2 text-xs">Not a valid email</p>
+            </div>
+
           </div>
           <div>
             <label for="password" class="block my-2 text-sm font-medium text-gray-900">Password</label>
-            <input type="password" name="password" placeholder="******" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-slate-50 focus:border-slate-50 block w-full p-2.5">
+            <input formControlName="password" type="password" name="password" placeholder="******" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-slate-50 focus:border-slate-50 block w-full p-2.5">
+            <div *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched">
+              <p class="text-red-500 m-2 text-xs">Password is required</p>
+            </div>
           </div>
           <div>
             <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm p-2 text-center">Submit</button>
