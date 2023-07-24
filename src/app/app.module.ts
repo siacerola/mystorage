@@ -9,7 +9,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { ChartComponent } from './pages/chart/chart.component';
+import { ChartlineComponent } from './pages/chartline/chartline.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { ChartComponent } from './pages/chart/chart.component';
     DashboardComponent,
     SidebarComponent,
     NavbarComponent,
-    ChartComponent
+    ChartlineComponent
   ],
   imports: [
     BrowserModule,
