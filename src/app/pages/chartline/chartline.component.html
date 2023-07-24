@@ -1,18 +1,21 @@
-<div class="flex h-48 rounded bg-gray-50 w-full">
-  <div>
-    <h2 class="text-4xl font-bold text-gray-900">Analytics dashboard</h2>
-    <p class="my-4 text-lg to-gray-500">
-      Monitor metrics, check reports nd review performance
-    </p>
-  </div>
-  <div>
-    <apx-chart
-    [series]="series"
-    [chart]="chart"
-    [title]="title">
+<div class="flex h-48 rounded bg-gray-50 h-auto">
+  <div class="w-full">
+    <div>
+      <h2 class="text-4xl font-bold text-gray-900">Analytics dashboard</h2>
+      <p class="my-4 text-lg to-gray-500">
+        Monitor metrics, check reports nd review performance
+      </p>
+    </div>
 
-    </apx-chart>
-
+    <div>
+      <apx-chart
+      [series]="chartOptions.series!"
+      [chart]="chartOptions.chart!"
+      [title]="chartOptions.title!"
+      [xaxis]="chartOptions.xaxis!">
+      </apx-chart>
+    </div>
   </div>
+
 
 </div>
