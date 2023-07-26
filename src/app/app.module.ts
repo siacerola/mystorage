@@ -10,6 +10,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartlineComponent } from './pages/chartline/chartline.component';
+import { ItemListComponent } from './pages/item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChartlineComponent } from './pages/chartline/chartline.component';
     DashboardComponent,
     SidebarComponent,
     NavbarComponent,
-    ChartlineComponent
+    ChartlineComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
