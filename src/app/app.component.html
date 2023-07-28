@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<!-- <p (newItemEvent)="changeState($event)"></p> -->
+<div *ngIf="state; then dashboard else login "></div>
+
+<ng-template #login>
+  <app-login (newItemEvent)="changeState($event)"></app-login>
+</ng-template>
+
+<ng-template #dashboard>
+  <app-dashboard></app-dashboard>
+</ng-template>

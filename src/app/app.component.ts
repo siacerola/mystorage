@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mystorage';
+
+  state: boolean = false
+
+  changeState(value: boolean) {
+    this.state=value
+  }
+
 }

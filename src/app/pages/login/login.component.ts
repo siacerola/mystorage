@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { UserModel } from 'src/app/model/user.model';
+import { Component, Output, EventEmitter } from '@angular/core';
+
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 
@@ -9,22 +9,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  @Output() newItemEvent = new EventEmitter<boolean>()
+
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('',[Validators.required])
   })
 
-  constructor(private router:Router){}
 
-  onSubmit() {
+
+
+  constructor(private router: Router) { }
+
+  onSubmit(value:boolean) {
     if (this.loginForm.valid) {
       console.log(this.loginForm.valid);
       console.log(this.loginForm.value.email);
       console.log(this.loginForm.value.password);
       this.router.navigate(['/dashboard'])
+      this.newItemEvent.emit(value)
+      console.log(value);
+
     } else {
       console.log(this.loginForm.valid);
+      console.log(value);
     }
-
   }
 }

@@ -9,7 +9,7 @@
         <h1 class="text-xl font-bold text-gray-900 leading-tight tracking-tight">
           Sign in to your account
         </h1>
-        <form class="space-y-6" [formGroup]="loginForm" (submit)="onSubmit()">
+        <form class="space-y-6" [formGroup]="loginForm" (submit)="onSubmit(loginForm.valid)">
           <div>
             <label for="email" class="block my-2 text-sm font-medium text-gray-900">Your email</label>
             <input formControlName="email" type="email" name="email" placeholder="name@email.com" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-slate-50 focus:border-slate-50 block w-full p-2.5">
