@@ -30,4 +30,7 @@ export class ItemListComponent {
     this.itemObeng
   ]
 
+  date = new Date().toLocaleDateString()
+
+
 }
