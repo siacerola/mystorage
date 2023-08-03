@@ -1,27 +1,46 @@
 <div class="relative overflow-x-auto rounded-lg">
+  <div class="pb-4 bg-white">
+    <label for="item-search" class="sr-only">Search</label>
+    <div class="relative mt-1">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+      </div>
+      <input type="text" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search for items">
+    </div>
+  </div>
+  <div class="pb-4 bg-white">
+    <p class="text-sm text-gray-900">Filter by:All</p>
+  </div>
+
   <table class="w-full text-sm text-left text-gray-500">
-    <thead class="text-xs text-gray-400 uppercase bg-gray-700">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
       <tr>
-        <th scope="col" class="px-6 py-3">
-          Item name
+        <th scope="col" class="p-4">
+          <div class="flex items-center">
+            <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+          </div>
         </th>
-        <th scope="col" class="px-6 py-3">
-          Category
-        </th>
-        <th scope="col" class="px-6 py-3">
-          QTY
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Status
-        </th>
+        <th scope="col" class="px-6 py-3">Item name</th>
+        <th scope="col" class="px-6 py-3">Category</th>
+        <th scope="col" class="px-6 py-3">QTY</th>
+        <th scope="col" class="px-6 py-3">Status</th>
+        <th scope="col" class="px-6 py-3">Latest Update</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of itemList" class="bg-gray-800 border-b border-gray-700 hover:bg-gray-600">
-        <th class="px-6 py-4">{{item.itemName}}</th>
+      <tr *ngFor="let item of itemList" class="bg-white border-b hover:bg-gray-50">
+        <td class="w-4 p-4">
+          <div class="flex items-center">
+            <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+          </div>
+        </td>
+        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-white">{{item.itemName}}</th>
         <td class="px-6 py-4">{{item.category}}</td>
         <td class="px-6 py-4">{{item.qty}}</td>
         <td class="px-6 py-4">{{item.status}}</td>
+        <td class="px-6 py-4">{{item.update}}</td>
       </tr>
     </tbody>
 

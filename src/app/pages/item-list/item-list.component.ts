@@ -12,7 +12,8 @@ export class ItemListComponent {
     itemName: "Tang Kombinasi",
     category: "developer",
     qty: 1,
-    status:"available"
+    status: "available",
+    update:"2023-08-03"
   })
 
   itemObeng: ItemModel = new ItemModel({
@@ -20,7 +21,8 @@ export class ItemListComponent {
     itemName: "obeng impact +",
     category: "developer",
     qty: 1,
-    status:"not available"
+    status: "not available",
+    update:"2023-08-02"
   })
 
   itemList: ItemModel[] = [
