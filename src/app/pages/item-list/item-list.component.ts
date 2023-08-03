@@ -7,6 +7,11 @@ import { ItemModel } from '../../model/item.model';
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent {
+  title = "Storage Items"
+  subtitle = "list item "
+
+  date = new Date().toLocaleDateString()
+
   itemTang: ItemModel = new ItemModel({
     id: 1,
     itemName: "Tang Kombinasi",
@@ -30,7 +35,7 @@ export class ItemListComponent {
     this.itemObeng
   ]
 
-  date = new Date().toLocaleDateString()
+
 
 
 }

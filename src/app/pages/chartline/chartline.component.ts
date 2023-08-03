@@ -20,6 +20,9 @@ export type ChartOptions = {
   styleUrls: ['./chartline.component.css']
 })
 export class ChartlineComponent {
+  title = "Finish Product"
+  subtitle = "finish product production annually"
+
   chartOptions: Partial<ChartOptions>;
 
   constructor() {

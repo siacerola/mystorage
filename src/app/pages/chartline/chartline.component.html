@@ -1,21 +1,12 @@
-<div class="flex h-48 rounded bg-white h-auto">
-  <div class="w-full">
-    <div>
-      <h2 class="text-4xl font-bold text-gray-900">Analytics dashboard</h2>
-      <p class="my-4 text-lg to-gray-500">
-        Monitor metrics, check reports nd review performance
-      </p>
-    </div>
 
-    <div>
-      <apx-chart
-      [series]="chartOptions.series!"
-      [chart]="chartOptions.chart!"
-      [title]="chartOptions.title!"
-      [xaxis]="chartOptions.xaxis!">
-      </apx-chart>
-    </div>
+<app-heading [title]="title" [subtitle]="subtitle"></app-heading>
+<div class="w-full">
+  <div>
+    <apx-chart
+    [series]="chartOptions.series!"
+    [chart]="chartOptions.chart!"
+    [title]="chartOptions.title!"
+    [xaxis]="chartOptions.xaxis!">
+    </apx-chart>
   </div>
-
-
 </div>
