@@ -4,6 +4,11 @@ export class DateFormat {
   /**
    * set date
    */
+  constructor() {
+
+  }
+
+
   public set date(date: Date) {
     this._date=date
   }
