@@ -12,6 +12,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartlineComponent } from './pages/chartline/chartline.component';
 import { ItemListComponent } from './pages/item-list/item-list.component';
 import { HeadingComponent } from './component/heading/heading.component';
+import { RentalComponent } from './pages/rental/rental.component';
+import { CustomerComponent } from './pages/customer/customer.component';
+import { SettingComponent } from './pages/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { HeadingComponent } from './component/heading/heading.component';
     NavbarComponent,
     ChartlineComponent,
     ItemListComponent,
-    HeadingComponent
+    HeadingComponent,
+    RentalComponent,
+    CustomerComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
