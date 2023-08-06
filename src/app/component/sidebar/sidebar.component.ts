@@ -10,5 +10,12 @@ export class SidebarComponent {
 
   constructor(private router: Router) { }
 
+  status: boolean = false
+
+  dropdown() {
+    this.status = !this.status
+    console.log(this.status);
+
+  }
 
 }
