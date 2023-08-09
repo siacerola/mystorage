@@ -15,6 +15,8 @@ import { HeadingComponent } from './component/heading/heading.component';
 import { RentalComponent } from './pages/rental/rental.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { SettingComponent } from './pages/setting/setting.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { SettingComponent } from './pages/setting/setting.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
