@@ -21,7 +21,7 @@ export type ChartOptions = {
 })
 export class ChartlineComponent {
   title = "Finish Product"
-  subtitle = "finish product production annually"
+  subtitle = "Finish product annually"
 
   chartOptions: Partial<ChartOptions>;
 
@@ -36,7 +36,7 @@ export class ChartlineComponent {
         type:"line"
       },
       title: {
-        text:"Finish Product annually"
+        // text:"Finish Product annually"
       },
       xaxis: {
         categories:[2014, 2015,  2016,  2017,  2018,  2019,  2020,  2021, 2022]
