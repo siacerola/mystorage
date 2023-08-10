@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ItemModel } from '../../model/item.model';
 import { DateFormat } from 'src/app/formatting/date.format';
+import { faMagnifyingGlass, faPlug, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-item-list',
@@ -10,6 +11,10 @@ import { DateFormat } from 'src/app/formatting/date.format';
 export class ItemListComponent {
   title = "Storage Items"
   subtitle = " "
+
+  faMagnifyngGlass = faMagnifyingGlass
+  faPlus = faPlus
+
 
   date = new Date()
   months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
