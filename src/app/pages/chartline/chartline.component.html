@@ -1,18 +1,16 @@
-<app-heading [title]="title" [subtitle]="subtitle"></app-heading>
-<div class="w-full">
-  <div>
-    <apx-chart
-    [series]="chartOptions.series!"
-    [chart]="chartOptions.chart!"
-    [xaxis]="chartOptions.xaxis!"
-    [markers]="chartOptions.markers!"
-    [dataLabels]="chartOptions.dataLabels!">
-    </apx-chart>
+<div class="p-4 border border-secondary-slate bg-primary-slate rounded-lg mt-16">
+  <app-heading [title]="title" [subtitle]="subtitle"></app-heading>
+  <div class="w-full">
+    <div>
+      <apx-chart
+      [series]="chartOptions.series!"
+      [chart]="chartOptions.chart!"
+      [xaxis]="chartOptions.xaxis!"
+      [markers]="chartOptions.markers!"
+      [dataLabels]="chartOptions.dataLabels!">
+      </apx-chart>
+    </div>
   </div>
 </div>
 
-<div class="flex w-full items-center justify-between">
-  <div>01</div>
-  <div>02</div>
-  <div>03</div>
-</div>
+<app-three-line-chart></app-three-line-chart>
