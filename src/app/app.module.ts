@@ -17,6 +17,7 @@ import { CustomerComponent } from './pages/customer/customer.component';
 import { SettingComponent } from './pages/setting/setting.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ThreeLineChartComponent } from './component/three-line-chart/three-line-chart.component';
+import { MainChartComponent } from './component/main-chart/main-chart.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ThreeLineChartComponent } from './component/three-line-chart/three-line
     RentalComponent,
     CustomerComponent,
     SettingComponent,
-    ThreeLineChartComponent
+    ThreeLineChartComponent,
+    MainChartComponent
   ],
   imports: [
     BrowserModule,
