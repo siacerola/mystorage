@@ -41,7 +41,7 @@ export class LineChartComponent {
       ],
       chart: {
         type: 'line',
-        height: 350,
+        height:"auto",
         toolbar: {
           show:false
         }

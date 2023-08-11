@@ -48,7 +48,7 @@ export class CashFlowChartComponent {
       ],
       chart: {
         type: 'bar',
-        height: 350,
+        height:"auto",
         toolbar: {
           show:false
         }
