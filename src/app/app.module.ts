@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ThreeLineChartComponent } from './component/three-line-chart/three-line-chart.component';
 import { MainChartComponent } from './component/main-chart/main-chart.component';
 import { CashFlowChartComponent } from './component/cash-flow-chart/cash-flow-chart.component';
+import { LineChartComponent } from './component/line-chart/line-chart.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CashFlowChartComponent } from './component/cash-flow-chart/cash-flow-ch
     SettingComponent,
     ThreeLineChartComponent,
     MainChartComponent,
-    CashFlowChartComponent
+    CashFlowChartComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
