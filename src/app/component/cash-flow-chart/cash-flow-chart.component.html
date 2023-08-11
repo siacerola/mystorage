@@ -1,1 +1,8 @@
-<p>cash-flow-chart works!</p>
+<app-heading [title]="title" [subtitle]="subtitle"></app-heading>
+<apx-chart
+      [series]="chartOptions.series!"
+      [chart]="chartOptions.chart!"
+      [xaxis]="chartOptions.xaxis!"
+      [markers]="chartOptions.markers!"
+      [dataLabels]="chartOptions.dataLabels!">
+      </apx-chart>
