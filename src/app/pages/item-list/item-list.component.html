@@ -1,67 +1,79 @@
-<app-heading [title]="title" [subtitle]="subtitle"></app-heading>
+<div class="bg-white rounded-lg p-4 border shadow mt-16">
+  <!-- title -->
+  <app-heading [title]="title" [subtitle]="subtitle"></app-heading>
+  <!-- end title -->
 
-<div class="flex pb-4">
+  <div class="flex pb-4">
+    <!-- date -->
+    <div class="w-full flex items-end justify-start">
+      <p class="text-sm text-primary-blue w-full">Last Update : {{dateFormat}}</p>
+    </div>
+    <!-- end date -->
 
-  <div class=" bg-primary-slate w-full flex items-end justify-start">
-    <p class="text-sm text-primary-blue w-full">Last Update : {{dateFormat}}</p>
-  </div>
-
-  <div class=" bg-primary-slate w-full flex items-center justify-end">
-    <div class="relative">
-      <input type="text"
-      placeholder="Search for items"
-      class="block p-2.5 pr-10 text-sm text-secondary-blue border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-secondary-blue focus:border-secondary-blue">
-      <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-        <fa-icon [icon]="faMagnifyngGlass" [fixedWidth]="true"></fa-icon>
+    <!-- search bar -->
+    <div class="w-full flex items-center justify-end">
+      <div class="relative">
+        <input type="text"
+        placeholder="Search for items"
+        class="block p-2.5 pr-10 text-sm text-secondary-blue border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-secondary-blue focus:border-secondary-blue">
+        <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+          <fa-icon [icon]="faMagnifyngGlass" [fixedWidth]="true"></fa-icon>
+        </div>
       </div>
     </div>
+    <!-- end search bar -->
+
+    <!-- add button -->
+    <div class="flex items-center justify-start">
+      <button type="button"
+      class="ml-5 w-28 text-white bg-blue-600 hover:bg-blue-500 focus:ring-4 font-medium rounded-lg text-sm py-2.5 focus:outline-none">
+        <fa-icon [icon]="faPlus" [fixedWidth]="true" class="mr-2"></fa-icon>
+        <span>Add Item</span>
+      </button>
+    </div>
+    <!-- end add button -->
+
   </div>
 
-  <div class="flex items-center justify-start">
-    <button type="button"
-    class="ml-5 w-28 text-primary-slate bg-primary-blue hover:bg-secondary-blue focus:ring-4 focus:ring-primary-blue font-medium rounded-lg text-sm py-2.5 focus:outline-none">
-      <fa-icon [icon]="faPlus" [fixedWidth]="true" class="mr-2"></fa-icon>
-      <span>Add Item</span>
-    </button>
+  <!-- table -->
+  <div class="relative overflow-x-auto rounded-lg">
+    <table class="w-full text-sm text-left">
+      <!-- table head -->
+      <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+        <tr>
+          <th scope="col" class="p-4">
+            <div class="flex items-center">
+              <input type="checkbox" class="w-4 h-4 rounded focus:ring-2">
+            </div>
+          </th>
+          <th scope="col" class="px-6 py-3">Item name</th>
+          <th scope="col" class="px-6 py-3">Category</th>
+          <th scope="col" class="px-6 py-3">QTY</th>
+          <th scope="col" class="px-6 py-3">Status</th>
+          <th scope="col" class="px-6 py-3">Latest Update</th>
+        </tr>
+      </thead>
+      <!-- end table head -->
+
+      <!-- table body -->
+      <tbody>
+        <tr *ngFor="let item of itemList" class="bg-white border-b hover:bg-gray-50">
+          <td class="w-4 p-4">
+            <div class="flex items-center">
+              <input type="checkbox" class="w-4 h-4 rounded focus:ring-2">
+            </div>
+          </td>
+          <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-gray-900 uppercase">{{item.itemName}}</th>
+          <td class="px-6 py-4">{{item.category}}</td>
+          <td class="px-6 py-4">{{item.qty}}</td>
+          <td class="px-6 py-4">{{item.status}}</td>
+          <td class="px-6 py-4">{{item.update}}</td>
+        </tr>
+      </tbody>
+      <!-- end table body -->
+
+    </table>
+
   </div>
-
-
-</div>
-
-
-
-
-<div class="relative overflow-x-auto rounded-lg">
-  <table class="w-full text-sm text-left">
-    <thead class="text-xs text-gray-700 uppercase bg-primary-blue text-primary-slate">
-      <tr>
-        <th scope="col" class="p-4">
-          <div class="flex items-center">
-            <input type="checkbox" class="w-4 h-4 bg-secondary-blue rounded focus:ring-primary-blue focus:ring-2">
-          </div>
-        </th>
-        <th scope="col" class="px-6 py-3">Item name</th>
-        <th scope="col" class="px-6 py-3">Category</th>
-        <th scope="col" class="px-6 py-3">QTY</th>
-        <th scope="col" class="px-6 py-3">Status</th>
-        <th scope="col" class="px-6 py-3">Latest Update</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of itemList" class="bg-secondary-slate text-secondary-blue border-b border-secondary-blue hover:bg-primary-slate">
-        <td class="w-4 p-4">
-          <div class="flex items-center">
-            <input type="checkbox" class="w-4 h-4 bg-secondary-blue rounded focus:ring-primary-blue focus:ring-2">
-          </div>
-        </td>
-        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-gray-900">{{item.itemName}}</th>
-        <td class="px-6 py-4">{{item.category}}</td>
-        <td class="px-6 py-4">{{item.qty}}</td>
-        <td class="px-6 py-4">{{item.status}}</td>
-        <td class="px-6 py-4">{{item.update}}</td>
-      </tr>
-    </tbody>
-
-  </table>
 
 </div>
