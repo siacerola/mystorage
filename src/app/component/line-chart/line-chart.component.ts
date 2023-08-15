@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
+
 
 import {
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
   ApexDataLabels,
-  ApexStroke,
-  ApexLegend,
-  ApexMarkers
+  ApexYAxis,
+  ApexGrid
 } from 'ng-apexcharts'
 
 export type ChartOptions = {
   series: ApexAxisChartSeries
   chart: ApexChart
   xaxis: ApexXAxis
-  stroke: ApexStroke
-  legend: ApexLegend
-  markers: ApexMarkers
-  dataLabels:ApexDataLabels
+  dataLabels: ApexDataLabels
+  yaxis: ApexYAxis
+  grid:ApexGrid
 }
 
 @Component({
@@ -27,8 +27,13 @@ export type ChartOptions = {
 })
 export class LineChartComponent {
 
-  title = "Monthly Sales"
-  subtitle=""
+  faUsers = faUsers
+
+  title = "Total Customer"
+
+  rng = Math.floor((Math.random() * 800_000) + 100_000)
+  formatter = (this.rng).toLocaleString('en-US')
+  gain = Math.floor((Math.random() * 11)+1)
 
   chartOptions :Partial<ChartOptions>
 
@@ -40,8 +45,9 @@ export class LineChartComponent {
         },
       ],
       chart: {
-        type: 'line',
-        height:"auto",
+        type: 'area',
+        height: "auto",
+        width:"100%",
         toolbar: {
           show:false
         }
@@ -49,13 +55,18 @@ export class LineChartComponent {
       dataLabels: {
         enabled: false
       },
-      stroke: {
-        curve:'stepline',
-        show: true,
-        width: 2,
-        colors: ['transparent']
+      grid: {
+        show:false
+      },
+      yaxis: {
+        labels: {
+          show:false
+        }
       },
       xaxis: {
+        labels: {
+          show:false
+        },
         categories: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
       }
     }

@@ -1,8 +1,22 @@
-<app-heading [title]="title" [subtitle]="subtitle"></app-heading>
-<apx-chart
+<div class="flex items-center w-full gap-x-2 justify-center">
+  <fa-icon [icon]="faUsers" class="p-1 text-gray-100 bg-gray-900 rounded-full" [fixedWidth]="true"></fa-icon>
+  <app-heading [title]="title" class="w-full"></app-heading>
+</div>
+
+<div class="py-4 gap-2 flex flex-row">
+  <div class="w-full">
+    <span class=" text-2xl font-bold">{{formatter}}</span>
+  </div>
+  <div class="flex">
+    <span class="rounded-xl bg-green-200 p-1">+{{gain}}%</span>
+  </div>
+</div>
+
+<!-- <apx-chart
   [series]="chartOptions.series!"
   [chart]="chartOptions.chart!"
   [xaxis]="chartOptions.xaxis!"
-  [markers]="chartOptions.markers!"
+  [yaxis]="chartOptions.yaxis!"
+  [grid]="chartOptions.grid!"
   [dataLabels]="chartOptions.dataLabels!">
-</apx-chart>
+</apx-chart> -->

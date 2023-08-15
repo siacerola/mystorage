@@ -28,7 +28,6 @@ export type ChartOptions = {
 export class MainChartComponent {
 
   title = "Finish Product"
-  subtitle = "Finish product annually"
 
   chartOptions: Partial<ChartOptions>;
 

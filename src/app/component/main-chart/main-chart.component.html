@@ -1,16 +1,8 @@
-
-<div class="p-4 border shadow rounded-lg mt-16 bg-white">
-  <app-heading [title]="title" [subtitle]="subtitle"></app-heading>
-  <div class="w-full">
-    <div>
-      <apx-chart
-      [series]="chartOptions.series!"
-      [chart]="chartOptions.chart!"
-      [xaxis]="chartOptions.xaxis!"
-      [markers]="chartOptions.markers!"
-      [dataLabels]="chartOptions.dataLabels!">
-      </apx-chart>
-    </div>
-  </div>
-</div>
-
+<app-heading [title]="title"></app-heading>
+<apx-chart
+[series]="chartOptions.series!"
+[chart]="chartOptions.chart!"
+[xaxis]="chartOptions.xaxis!"
+[markers]="chartOptions.markers!"
+[dataLabels]="chartOptions.dataLabels!">
+</apx-chart>

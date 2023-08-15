@@ -1,23 +1,22 @@
 import { Component } from '@angular/core';
+import{ faDollarSign, faPlus } from'@fortawesome/free-solid-svg-icons'
 
 import {
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
   ApexDataLabels,
-  ApexStroke,
-  ApexLegend,
-  ApexMarkers
+  ApexYAxis,
+  ApexGrid
 } from 'ng-apexcharts'
 
 export type ChartOptions = {
   series: ApexAxisChartSeries
   chart: ApexChart
   xaxis: ApexXAxis
-  stroke: ApexStroke
-  legend: ApexLegend
-  markers: ApexMarkers
-  dataLabels:ApexDataLabels
+  dataLabels: ApexDataLabels
+  yaxis: ApexYAxis
+  grid:ApexGrid
 }
 @Component({
   selector: 'app-cash-flow-chart',
@@ -25,8 +24,17 @@ export type ChartOptions = {
   styleUrls: ['./cash-flow-chart.component.css']
 })
 export class CashFlowChartComponent {
-  title = "Cash Flow"
-  subtitle=""
+  faDollarSign = faDollarSign
+  faPlus = faPlus
+
+  title = "Revenue"
+  rng = Math.floor((Math.random() * 800_000) + 100_000)
+  formatter = (this.rng).toLocaleString('en-US', {
+    style: 'currency',
+    currency:'USD'
+  })
+  gain = Math.floor((Math.random() * 11)+1)
+
 
   chartOptions :Partial<ChartOptions>
 
@@ -34,21 +42,14 @@ export class CashFlowChartComponent {
     this.chartOptions = {
       series: [
         {
-          name: 'Net Profit',
-          data: [57, 56, 61, 58, 63, 60, 66]
-        },
-        {
           name: 'Revenue',
-          data: [ 101, 98, 87, 105, 91, 114, 94]
-        },
-        {
-          name: 'Free Cash Flow',
-          data: [36, 26, 45, 48, 52, 53, 41]
+          data: [89, 95, 90, 101, 98, 105, 114]
         }
       ],
       chart: {
-        type: 'bar',
+        type: 'area',
         height:"auto",
+        width:"100%",
         toolbar: {
           show:false
         }
@@ -56,13 +57,19 @@ export class CashFlowChartComponent {
       dataLabels: {
         enabled: false
       },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
+      grid: {
+        show:false
+      },
+      yaxis: {
+        labels: {
+          show:false
+        }
       },
       xaxis: {
-        categories: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        labels: {
+          show:false
+        },
+        categories: ['Apr','May','Jun','Jul', 'Aug', 'Sep', 'Oct'],
       }
     }
   }
