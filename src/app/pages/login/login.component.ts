@@ -30,7 +30,6 @@ export class LoginComponent {
       this.newItemEvent.emit(value)
       this.router.navigate(['/dashboard/summary'])
       console.log(value);
-
     } else {
       console.log(this.loginForm.valid);
       console.log(value);

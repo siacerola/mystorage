@@ -49,7 +49,4 @@ export class ItemListComponent {
     this.itemObeng
   ]
 
-
-
-
 }

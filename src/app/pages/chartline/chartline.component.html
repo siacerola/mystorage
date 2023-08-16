@@ -1,23 +1,46 @@
-<div class="gap-4 mt-16 grid grid-cols-3 w-full items-center">
+<div class="gap-4 mt-16 grid grid-cols-4 w-full items-center">
   <!-- row 1 -->
   <div class="shadow rounded-lg border bg-white">
     <div class="p-4 w-full">
-      <app-cash-flow-chart></app-cash-flow-chart>
+      <app-cash-flow-chart
+      [title]="titleRevenue"
+      [nominal]="nominal"
+      [gainNominal]="gain"
+      [ic]="ic"
+      [mode]="mode">
+      </app-cash-flow-chart>
+    </div>
+  </div>
+
+  <!-- <div class="shadow rounded-lg border bg-white">
+    <div class="p-4 w-full">
+      <app-cash-flow-chart
+      [title]="titleProfit"
+      [rev]="profit">
+
+      </app-cash-flow-chart>
     </div>
   </div>
 
   <div class="shadow rounded-lg border bg-white">
     <div class="p-4 w-full">
-      <app-line-chart></app-line-chart>
+      <app-cash-flow-chart
+      [title]="titleCustomer"
+      [rev]="customer">
+
+      </app-cash-flow-chart>
     </div>
   </div>
 
   <div class="shadow rounded-lg border bg-white">
     <div class="p-4 w-full">
-      <app-pie-chart></app-pie-chart>
-      03
+      <app-cash-flow-chart
+      [title]="titleOrder"
+      [rev]="orders">
+
+      </app-cash-flow-chart>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- end row 1 -->
