@@ -1,56 +1,17 @@
 export class RandomGenerator {
-  _nominal!: number
-  // private gain!:number
-  // private mode!: boolean
+  private _nominal!: number
+  private _gain!: number
+  private _mode!:boolean
 
-  constructor(nominalValue: number) {
-    this._nominal = nominalValue
-    // this.gain = gainValue
-    // this.mode = modeValue
+  constructor(response: any) {
+    this._nominal = response.nominal
+    this._gain = response.gain
+    this._mode = response.mode
+
   }
 
-  // get max() : number {
+  // public get getNominal() : number {
   //   return this._nominal
-  // }
-
-
-  // public get modeValue() : boolean {
-  //   return this.mode
-  // }
-
-
-  /**
-   * randomize
-   */
-  // private randomize(): number[] {
-  //   let rand=[]
-  //   rand[0] = Math.floor(Math.random() * this.nominal)
-  //   // rand[1]=Math.floor(Math.random() * this.gain)
-  //   return rand
-  // }
-
-  /**
-   * formatNumber
-   */
-  // public formatNumber() {
-  //   let random = this.randomize()
-  //   let ret=[]
-  //   let located = 'en-US'
-  //   let option = {
-  //     style: 'currency',
-  //     currency:'USD'
-  //   }
-  //   true : currency format
-  //   if (this.mode) {
-  //     // nominal currency
-  //     ret[0] = new Intl.NumberFormat(located, option).format(random[0])
-  //     ret[1] = new Intl.NumberFormat(located, option).format(random[1])
-  //     return ret
-  //   } else {
-  //     ret[0] = new Intl.NumberFormat().format(random[0])
-  //     ret[1] = new Intl.NumberFormat().format(random[1])
-  //     return ret
-  //   }
   // }
 
 }

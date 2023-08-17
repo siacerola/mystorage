@@ -31,25 +31,13 @@ export class CashFlowChartComponent {
 
   // data from parent
   @Input() title = "lorem ipsum"
-  // @param 1 rng for main number
-  // @param 2 rng for gain number
-  // @param 3 change icon card
-  // @param 4 change format number
-  @Input() nominal:number=0
-  @Input() gainNominal:number = 0
+  @Input() nominal=0
+  @Input() gainNominal= 0
   @Input() ic = 0
-  @Input() mode:boolean = true
+  @Input() mode= true
 
   // icon
   icon = [faDollarSign, faChartLine, faUsers, faCoins]
-
-  randomNominal: RandomGenerator = new RandomGenerator(
-    this.nominal
-  )
-
-  rng:number = this.randomNominal._nominal
-
-
 
   chartOptions :Partial<ChartOptions>
 
