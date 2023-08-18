@@ -4,6 +4,7 @@ import {
   ApexNonAxisChartSeries,
   ApexChart,
   ApexResponsive,
+  ApexLegend,
 
 } from 'ng-apexcharts'
 
@@ -12,6 +13,8 @@ export type ChartOptions = {
   chart: ApexChart
   responsive: ApexResponsive[]
   labels: any
+  legend: ApexLegend
+
 
 }
 
@@ -32,22 +35,24 @@ export class PieChartComponent {
       series: [44, 55, 13, 43, 22],
       chart: {
         type: "donut",
-        height:"auto"
+        height: "auto",
+        width:"100%"
       },
       labels: ["Spreader", "Roaster Coffee", "Alat kesehatan", "Wastafel", "Show case"],
       responsive: [
         {
-          breakpoint: 480,
           options: {
             chart: {
               width: "auto",
-            },
-            legend: {
-              position: "bottom"
             }
           }
         }
-      ]
+      ],
+      legend: {
+        show: true,
+        position:'bottom'
+      }
+
     };
   }
 }

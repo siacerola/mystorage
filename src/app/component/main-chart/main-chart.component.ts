@@ -7,7 +7,7 @@ import {
   ApexDataLabels,
   ApexStroke,
   ApexLegend,
-  ApexMarkers
+  ApexGrid
 } from 'ng-apexcharts'
 
 export type ChartOptions = {
@@ -16,7 +16,7 @@ export type ChartOptions = {
   xaxis: ApexXAxis
   stroke: ApexStroke
   legend: ApexLegend
-  markers: ApexMarkers
+  grid:ApexGrid
   dataLabels:ApexDataLabels
 };
 
@@ -27,7 +27,7 @@ export type ChartOptions = {
 })
 export class MainChartComponent {
 
-  title = "Finish Product"
+  title = "Overall Sales"
 
   chartOptions: Partial<ChartOptions>;
 
@@ -35,12 +35,8 @@ export class MainChartComponent {
     this.chartOptions = {
       series: [
         {
-          name: "Roaster 3kg",
+          name: "sales",
           data: [10, 20, 15, 18, 23, 47, 31, 56, 61]
-        },
-        {
-          name: "Roaster 5kg",
-          data: [5, 6, 11, 13, 9, 12, 14, 25, 36]
         }
       ],
       chart: {
@@ -53,8 +49,8 @@ export class MainChartComponent {
       dataLabels: {
         enabled:false
       },
-      markers: {
-        size: 5,
+      grid: {
+        show:false
       },
       xaxis: {
         categories:[2014, 2015,  2016,  2017,  2018,  2019,  2020,  2021, 2022]
