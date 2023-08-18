@@ -1,18 +1,18 @@
 
-<div class="flex items-center w-full gap-x-2 justify-center">
+<div class="flex items-center gap-x-2 justify-center">
   <fa-icon [icon]="icon[ic]" class="p-1 text-gray-100 bg-gray-900 rounded-full" [fixedWidth]="true"></fa-icon>
   <app-heading [title]="title" class="w-full uppercase"></app-heading>
-    <span class=" text-2xl">{{nominal}}</span>
+    <span class=" text-2xl">{{currency(mode)[0]}}</span>
 </div>
 
 <div class="py-4 gap-2 flex">
   <div class="flex flex-col">
     <div *ngIf="mode;then curr else numb"></div>
     <ng-template #curr>
-      <span class="text-green-500"></span>
+      <span class="text-green-500">{{currency(mode)[1]}}</span>
     </ng-template>
     <ng-template #numb>
-      <span class="text-green-500"></span>
+      <span class="text-green-500">{{currency(mode)[1]}}</span>
     </ng-template>
 
     <span class="text-green-500">+{{gainNominal}}%</span>

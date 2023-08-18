@@ -11,8 +11,6 @@ import {
   ApexStroke
 } from 'ng-apexcharts'
 
-import { RandomGenerator } from 'src/app/formatting/random.format';
-
 export type ChartOptions = {
   series: ApexAxisChartSeries
   chart: ApexChart
@@ -31,10 +29,31 @@ export class CashFlowChartComponent {
 
   // data from parent
   @Input() title = "lorem ipsum"
-  @Input() nominal=0
-  @Input() gainNominal= 0
-  @Input() ic = 0
-  @Input() mode= true
+  @Input() nominal: number = 0
+  @Input() gainNominal: number = 0
+  @Input() ic: number = 0
+  @Input() mode: boolean = true
+
+  currency = (value: boolean): string[] => {
+    let located = 'en-US'
+    let option = {
+      style: 'currency',
+      currency:'USD'
+    }
+
+    let main
+    let gain
+
+    if (value) {
+      main = new Intl.NumberFormat(located, option).format(this.nominal)
+      gain = new Intl.NumberFormat(located, option).format((this.gainNominal*0.01)*this.nominal)
+      return [main,gain]
+    } else {
+      main = new Intl.NumberFormat(located).format(this.nominal)
+      gain = new Intl.NumberFormat(located).format((this.gainNominal*0.01)*this.nominal)
+      return [main,gain]
+    }
+  }
 
   // icon
   icon = [faDollarSign, faChartLine, faUsers, faCoins]

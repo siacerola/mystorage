@@ -1,64 +1,70 @@
-<div class="gap-4 mt-16 grid grid-cols-4 w-full items-center">
-  <!-- row 1 -->
-  <div class="shadow rounded-lg border bg-white">
-    <div class="p-4 w-full">
-      <app-cash-flow-chart
-      [title]="titleRevenue"
-      [nominal]="nominal"
-      [gainNominal]="gain"
-      [ic]="ic"
-      [mode]="mode">
-      </app-cash-flow-chart>
+<div class="mt-16 items-center">
+
+  <!-- <div class="grid grid-rows-3 grid-flow-col">
+    <div class="gap-4 grid-cols-4"> -->
+      <!-- <div *ngFor="let item of listCard">
+        <div class="row-span-1 p-4 shadow rounded-lg border bg-white">
+          <app-cash-flow-chart
+          [ic]="item.icon"
+          [title]="item.title"
+          [nominal]="item.nominal"
+          [gainNominal]="item.gain"
+          [mode]="item.currency">
+          </app-cash-flow-chart>
+        </div>
+      </div> -->
+      <!-- <div class="col-span-1">1</div>
+      <div class="col-span-1">1</div>
+      <div class="col-span-1">1</div>
+      <div class="col-span-1">1</div>
     </div>
-  </div>
 
-  <!-- <div class="shadow rounded-lg border bg-white">
-    <div class="p-4 w-full">
-      <app-cash-flow-chart
-      [title]="titleProfit"
-      [rev]="profit">
-
-      </app-cash-flow-chart>
-    </div>
-  </div>
-
-  <div class="shadow rounded-lg border bg-white">
-    <div class="p-4 w-full">
-      <app-cash-flow-chart
-      [title]="titleCustomer"
-      [rev]="customer">
-
-      </app-cash-flow-chart>
-    </div>
-  </div>
-
-  <div class="shadow rounded-lg border bg-white">
-    <div class="p-4 w-full">
-      <app-cash-flow-chart
-      [title]="titleOrder"
-      [rev]="orders">
-
-      </app-cash-flow-chart>
-    </div>
   </div> -->
+    <!-- row 1 -->
 
+    <!-- end row 1 -->
 
-  <!-- end row 1 -->
-
-  <!-- row 2 -->
-  <div class="col-span-2 shadow rounded-lg border bg-white">
-    <div class="p-4 w-full">
-      <app-main-chart></app-main-chart>
+    <!-- row 2 -->
+    <!-- <div class="p-4 shadow rounded-lg border bg-white">
+        <app-main-chart></app-main-chart>
     </div>
-  </div>
 
-  <div class="shadow rounded-lg border bg-white">
-    <div class="p-4 w-full">
-      <app-pie-chart></app-pie-chart>
+    <div class="p-4 shadow rounded-lg border bg-white">
+        <app-pie-chart></app-pie-chart>
+    </div> -->
+    <!-- end row 2 -->
+  <div class="gap-4 grid">
+    <!-- row 1 -->
+    <div class="gap-4 grid grid-rows-1 grid-flow-col">
+      <div *ngFor="let item of listCard">
+        <div class="col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
+          <app-cash-flow-chart
+            [ic]="item.icon"
+            [title]="item.title"
+            [nominal]="item.nominal"
+            [gainNominal]="item.gain"
+            [mode]="item.currency">
+            </app-cash-flow-chart>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- end row 2 -->
+    <!-- end row 1 -->
 
+    <!-- row 2 - 3-->
+    <div class="gap-4 grid grid-flow-row grid-cols-4">
+      <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
+        <app-main-chart></app-main-chart>
+      </div>
+      <div class="col-span-1 row-span-2 p-4 shadow rounded-lg border bg-white">
+        <app-pie-chart></app-pie-chart>
+      </div>
+      <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
+
+      </div>
+    </div>
+    <!-- end row 2 - 3 -->
+
+  </div>
 
 </div>
 

@@ -1,12 +1,16 @@
 export class RandomGenerator {
-  private _nominal!: number
-  private _gain!: number
-  private _mode!:boolean
+  icon!: number
+  title!: string
+  nominal!: number
+  gain!: number
+  currency!: boolean
 
   constructor(response: any) {
-    this._nominal = response.nominal
-    this._gain = response.gain
-    this._mode = response.mode
+    this.icon = response.icon
+    this.title = response.title
+    this.nominal = response.nominal
+    this.gain = response.gain
+    this.currency = response.currency
 
   }
 
