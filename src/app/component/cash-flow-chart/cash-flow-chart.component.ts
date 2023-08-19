@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import{ faChartLine, faCoins, faDollarSign, faUsers } from'@fortawesome/free-solid-svg-icons'
+import * as ApexCharts from 'apexcharts';
 
 import {
   ApexAxisChartSeries,
@@ -18,8 +19,10 @@ export type ChartOptions = {
   dataLabels: ApexDataLabels
   yaxis: ApexYAxis
   grid: ApexGrid
-  stroke:ApexStroke
+  stroke: ApexStroke
+  colors: string[]
 }
+
 @Component({
   selector: 'app-cash-flow-chart',
   templateUrl: './cash-flow-chart.component.html',
@@ -28,11 +31,12 @@ export type ChartOptions = {
 export class CashFlowChartComponent {
 
   // data from parent
-  @Input() title = "lorem ipsum"
+  @Input() title = ''
   @Input() nominal: number = 0
   @Input() gainNominal: number = 0
   @Input() ic: number = 0
   @Input() mode: boolean = true
+  @Input() colors: string = ''
 
   currency = (value: boolean): string[] => {
     let located = 'en-US'
@@ -58,13 +62,15 @@ export class CashFlowChartComponent {
   // icon
   icon = [faDollarSign, faChartLine, faUsers, faCoins]
 
-  chartOptions :Partial<ChartOptions>
+  chartOptions: Partial<ChartOptions>
+
+
 
   constructor() {
     this.chartOptions = {
       series: [
         {
-          name: 'Revenue',
+          name: `${this.title}`,
           data: [0, 0, 0, 1, 1, 0, 1]
         }
       ],
@@ -76,6 +82,7 @@ export class CashFlowChartComponent {
           show:false
         }
       },
+      colors:[`${this.colors}`],
       dataLabels: {
         enabled: false
       },
@@ -97,5 +104,9 @@ export class CashFlowChartComponent {
         categories: ['Apr','May','Jun','Jul', 'Aug', 'Sep', 'Oct'],
       }
     }
+  }
+
+  public updateOptions() {
+    this.chartOptions.colors=[this.colors]
   }
 }

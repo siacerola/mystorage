@@ -4,6 +4,7 @@ export class RandomGenerator {
   nominal!: number
   gain!: number
   currency!: boolean
+  color!:string
 
   constructor(response: any) {
     this.icon = response.icon
@@ -11,6 +12,7 @@ export class RandomGenerator {
     this.nominal = response.nominal
     this.gain = response.gain
     this.currency = response.currency
+    this.color = response.color
 
   }
 
