@@ -17,7 +17,7 @@
 
     <span class="text-green-500">+{{gainNominal}}% {{colors}}</span>
   </div>
-  <div class="flex">
+  <div class="flex" (click)="update()">
     <apx-chart
     [series]="chartOptions.series!"
     [chart]="chartOptions.chart!"

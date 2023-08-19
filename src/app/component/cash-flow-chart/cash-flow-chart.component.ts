@@ -64,7 +64,15 @@ export class CashFlowChartComponent {
 
   chartOptions: Partial<ChartOptions>
 
-
+  update() {
+    this.chartOptions.colors = [this.colors]
+    this.chartOptions.series = [
+      {
+        name: this.title,
+        data:[0, 0, 0, 1, 1, 0, 1]
+      }
+    ]
+  }
 
   constructor() {
     this.chartOptions = {
@@ -104,9 +112,5 @@ export class CashFlowChartComponent {
         categories: ['Apr','May','Jun','Jul', 'Aug', 'Sep', 'Oct'],
       }
     }
-  }
-
-  public updateOptions() {
-    this.chartOptions.colors=[this.colors]
   }
 }
