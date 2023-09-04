@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input,OnInit } from '@angular/core';
 import{ faChartLine, faCoins, faDollarSign, faUsers } from'@fortawesome/free-solid-svg-icons'
 import * as ApexCharts from 'apexcharts';
 
@@ -28,7 +28,7 @@ export type ChartOptions = {
   templateUrl: './cash-flow-chart.component.html',
   styleUrls: ['./cash-flow-chart.component.css']
 })
-export class CashFlowChartComponent {
+export class CashFlowChartComponent implements OnInit{
 
   // data from parent
   @Input() title = ''
@@ -63,6 +63,7 @@ export class CashFlowChartComponent {
   icon = [faDollarSign, faChartLine, faUsers, faCoins]
 
   chartOptions: Partial<ChartOptions>
+
 
   update() {
     this.chartOptions.colors = [this.colors]
@@ -112,5 +113,15 @@ export class CashFlowChartComponent {
         categories: ['Apr','May','Jun','Jul', 'Aug', 'Sep', 'Oct'],
       }
     }
+  }
+  ngOnInit(): void {
+
+    this.chartOptions.colors = [this.colors]
+    this.chartOptions.series = [
+      {
+        name: this.title,
+        data:[0, 0, 0, 1, 1, 0, 1]
+      }
+    ]
   }
 }
