@@ -50,8 +50,8 @@ export class ChartlineComponent {
   listCard: RandomGenerator[] = [
     this.revenue,
     this.profit,
-    this.customer,
-    this.order
+    this.order,
+    this.customer
   ]
 
 
