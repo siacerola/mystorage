@@ -21,7 +21,7 @@ import { MainChartComponent } from './component/main-chart/main-chart.component'
 import { CashFlowChartComponent } from './component/cash-flow-chart/cash-flow-chart.component';
 import { LineChartComponent } from './component/line-chart/line-chart.component';
 import { PieChartComponent } from './component/pie-chart/pie-chart.component';
-import { ListComponent } from './app/component/list/list.component';
+import { ListComponent } from './component/list/list.component';
 
 
 @NgModule({

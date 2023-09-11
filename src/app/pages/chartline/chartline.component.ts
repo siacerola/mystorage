@@ -53,4 +53,13 @@ export class ChartlineComponent {
     this.customer,
     this.order
   ]
+
+
+  headerList: string[] = [
+    'name',
+    'role',
+    'division',
+    'phone',
+    'status'
+  ]
 }

@@ -1,1 +1,26 @@
-<p>list works!</p>
+<div class="relative shadow-md">
+  <table class="w-full table-auto text-sm text-left ">
+    <thead class="text-xs text-gray-700 uppercase">
+      <tr>
+        <th scope="col" class="p-4">
+          <div class="flex flex-1 items-center">
+            <input type="checkbox" class="w-4 h-4 rounded focus:ring-2">
+          </div>
+        </th>
+
+        <ng-container *ngFor="let item of headerList">
+          <th scope="col" class="px-6 py-3" >{{item}}</th>
+        </ng-container>
+
+      </tr>
+
+    </thead>
+    <tbody>
+
+    </tbody>
+
+
+
+  </table>
+
+</div>

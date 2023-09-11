@@ -20,15 +20,22 @@
 
     <!-- row 2 - 3-->
     <div class="gap-4 grid grid-flow-row grid-cols-4">
+      <!-- row 2 -->
       <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
         <app-main-chart></app-main-chart>
       </div>
       <div class="col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
         <app-pie-chart></app-pie-chart>
       </div>
-      <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
+      <!-- end row 2 -->
 
+      <!-- row 3 -->
+      <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
+        <app-list
+        [headerList]="headerList"></app-list>
       </div>
+
+      <!-- end row 3 -->
     </div>
     <!-- end row 2 - 3 -->
 
