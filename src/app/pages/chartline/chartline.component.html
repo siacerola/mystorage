@@ -2,7 +2,7 @@
 
   <div class="gap-4 grid">
     <!-- row 1 -->
-    <div class="gap-4 grid grid-rows-1 grid-flow-col">
+    <div class="gap-4 grid grid-rows-1 grid-cols-4">
       <div *ngFor="let item of listCard">
         <div class="col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
           <app-cash-flow-chart
@@ -30,9 +30,11 @@
       <!-- end row 2 -->
 
       <!-- row 3 -->
-      <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
-        <app-list
-        [headerList]="headerList"></app-list>
+      <div class=" col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
+        <div class="">
+          <app-list [headerList]="headerList" [picList]="picList"></app-list>
+        </div>
+
       </div>
 
       <!-- end row 3 -->

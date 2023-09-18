@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RandomGenerator } from 'src/app/formatting/random.format';
+import { PicModel } from 'src/app/model/pic.model';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class ChartlineComponent {
   customer: RandomGenerator = new RandomGenerator({
     icon: 2,
     title: 'customer',
-    nominal: 4_000,
+    nominal: 44_000,
     gain: 2,
     currency: false,
     color: '#a855f7'
@@ -50,8 +51,8 @@ export class ChartlineComponent {
   listCard: RandomGenerator[] = [
     this.revenue,
     this.profit,
-    this.order,
-    this.customer
+    this.customer,
+    this.order
   ]
 
 
@@ -61,5 +62,48 @@ export class ChartlineComponent {
     'division',
     'phone',
     'status'
+  ]
+
+  picBowo:PicModel=new PicModel(
+    0,
+    "bowo",
+    "drawer",
+    "engineer",
+    "08123456789",
+    "available"
+  )
+
+  picBangun:PicModel=new PicModel(
+    1,
+    "bangun",
+    "drawer",
+    "engineer",
+    "08987654321",
+    "available"
+  )
+
+  picGunawan:PicModel=new PicModel(
+    2,
+    "gunawan",
+    "drawer",
+    "engineer",
+    "08123456789",
+    "available"
+  )
+
+  picUtami:PicModel=new PicModel(
+    3,
+    "utami",
+    "drawer",
+    "engineer",
+    "08987654321",
+    "not available"
+  )
+
+  picList:PicModel[]=[
+    this.picBowo,
+    this.picBangun,
+    this.picGunawan,
+    this.picUtami
   ]
 }
