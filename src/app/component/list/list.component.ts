@@ -29,4 +29,5 @@ export class ListComponent implements OnInit {
 
     return value.toLocaleDateString(locale,options)
   }
+
 }

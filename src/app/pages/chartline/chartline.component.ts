@@ -75,7 +75,7 @@ export class ChartlineComponent {
     'part mesin 3kg prime',
     'laser',
     22_000_000,
-    new Date(2023, 9, 12),
+    new Date(2023, 10, 12),
     'aris setiawan',
     new Date(2023, 9, 15)
   )
@@ -84,16 +84,52 @@ export class ChartlineComponent {
     '1936P3-2023',
     'agus triono',
     'part cover utama',
-    'laser',
+    'bending',
     536_000,
-    new Date(2023,8,9),
+    new Date(2023,9,9),
     'aris setiawan',
     new Date(2023,8,12)
   )
 
+  order3:SalesOrder=new SalesOrder(
+    '1037-2023',
+    'steda multi usaha',
+    'roaster 3kg versi lama',
+    'welding',
+    27_750_000,
+    new Date(2023,5,19),
+    'aris setiawan',
+    new Date(2023,4,26)
+  )
+
+  order4:SalesOrder=new SalesOrder(
+    '1037-2023',
+    'steda multi usaha',
+    'roaster 3kg versi lama',
+    'assembling',
+    27_750_000,
+    new Date(2023,5,19),
+    'aris setiawan',
+    new Date(2023,4,26)
+  )
+
+  order5:SalesOrder=new SalesOrder(
+    '1037-2023',
+    'steda multi usaha',
+    'roaster 3kg versi lama',
+    'painting',
+    27_750_000,
+    new Date(2023,5,19),
+    'aris setiawan',
+    new Date(2023,4,26)
+  )
+
   listSO: SalesOrder[] = [
     this.order1,
-    this.order2
+    this.order2,
+    this.order3,
+    this.order4,
+    this.order5
   ]
 
 }
