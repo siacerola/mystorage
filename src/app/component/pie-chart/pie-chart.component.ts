@@ -5,6 +5,7 @@ import {
   ApexChart,
   ApexResponsive,
   ApexLegend,
+  ApexTheme
 
 } from 'ng-apexcharts'
 
@@ -14,7 +15,7 @@ export type ChartOptions = {
   responsive: ApexResponsive[]
   labels: any
   legend: ApexLegend
-
+  theme:ApexTheme
 
 }
 
@@ -37,6 +38,11 @@ export class PieChartComponent {
         type: "donut",
         height: "auto",
         width:"100%"
+      },
+      theme:{
+        monochrome:{
+          enabled:true
+        }
       },
       labels: ["Spreader", "Roaster Coffee", "Alat kesehatan", "Wastafel", "Show case"],
       responsive: [
