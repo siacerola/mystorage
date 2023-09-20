@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RandomGenerator } from 'src/app/formatting/random.format';
-import { PicModel } from 'src/app/model/pic.model';
-
+import { SalesOrder } from 'src/app/model/SalesOrder.model';
+import { DateFormat } from 'src/app/formatting/date.format';
 
 @Component({
   selector: 'app-chartline',
@@ -10,11 +10,11 @@ import { PicModel } from 'src/app/model/pic.model';
 })
 export class ChartlineComponent {
 
-  list=[1,2,3,4]
+  list = [1, 2, 3, 4]
 
   revenue: RandomGenerator = new RandomGenerator({
     icon: 0,
-    title:'revenue',
+    title: 'revenue',
     nominal: 100_000,
     gain: 11,
     currency: true,
@@ -56,54 +56,31 @@ export class ChartlineComponent {
   ]
 
 
+  // header table
   headerList: string[] = [
-    'name',
-    'role',
-    'division',
-    'phone',
-    'status'
+    'no so',
+    'customer',
+    'product',
+    'status',
+    'price',
+    'deadline',
+    'pic',
+    'last update'
   ]
 
-  picBowo:PicModel=new PicModel(
-    0,
-    "bowo",
-    "drawer",
-    "engineer",
-    "08123456789",
-    "available"
+  roaster5kg: SalesOrder = new SalesOrder(
+    '2287PM3-2003',
+    'Agus Triono',
+    'part mesin 3kg prime',
+    'laser',
+    22_000_000,
+    new Date(2023, 9, 12),
+    'aris setiawan',
+    new Date(2023, 10, 12)
   )
 
-  picBangun:PicModel=new PicModel(
-    1,
-    "bangun",
-    "drawer",
-    "engineer",
-    "08987654321",
-    "available"
-  )
-
-  picGunawan:PicModel=new PicModel(
-    2,
-    "gunawan",
-    "drawer",
-    "engineer",
-    "08123456789",
-    "available"
-  )
-
-  picUtami:PicModel=new PicModel(
-    3,
-    "utami",
-    "drawer",
-    "engineer",
-    "08987654321",
-    "not available"
-  )
-
-  picList:PicModel[]=[
-    this.picBowo,
-    this.picBangun,
-    this.picGunawan,
-    this.picUtami
+  listSO: SalesOrder[] = [
+    this.roaster5kg
   ]
+
 }

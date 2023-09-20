@@ -4,19 +4,19 @@ export class DateFormat {
   /**
    * set date
    */
-  constructor() {
-
+  constructor(date: Date) {
+    this._date = date
   }
 
 
-  public set date(date: Date) {
-    this._date=date
+  set date(date: Date) {
+    this._date = date
   }
 
-  public get dateFormat() {
+  get dateFormat(): Date {
     let dd = this._date.getDate()
     let mm = this._months[this._date.getMonth()]
-    let yyyy=this._date.getFullYear()
-    return `${dd} ${mm} ${yyyy}`
+    let yyyy = this._date.getFullYear()
+    return this._date
   }
 }

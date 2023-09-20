@@ -1,6 +1,7 @@
 export class SalesOrder {
   numberSO!: string
   customer!: string
+  product!: string
   status!: string
   price!: number
   deadLine!: Date
@@ -10,6 +11,7 @@ export class SalesOrder {
   constructor(
     SO: string,
     customer: string,
+    product: string,
     status: string,
     price: number,
     deadline: Date,
@@ -18,6 +20,7 @@ export class SalesOrder {
   ) {
     this.numberSO = SO
     this.customer = customer
+    this.product = product
     this.status = status
     this.price = price
     this.deadLine = deadline
