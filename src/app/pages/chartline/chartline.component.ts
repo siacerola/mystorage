@@ -68,7 +68,8 @@ export class ChartlineComponent {
     'last update'
   ]
 
-  roaster5kg: SalesOrder = new SalesOrder(
+
+  order1: SalesOrder = new SalesOrder(
     '2287PM3-2003',
     'Agus Triono',
     'part mesin 3kg prime',
@@ -76,11 +77,23 @@ export class ChartlineComponent {
     22_000_000,
     new Date(2023, 9, 12),
     'aris setiawan',
-    new Date(2023, 10, 12)
+    new Date(2023, 9, 15)
+  )
+
+  order2:SalesOrder= new SalesOrder(
+    '1936P3-2023',
+    'agus triono',
+    'part cover utama',
+    'laser',
+    536_000,
+    new Date(2023,8,9),
+    'aris setiawan',
+    new Date(2023,8,12)
   )
 
   listSO: SalesOrder[] = [
-    this.roaster5kg
+    this.order1,
+    this.order2
   ]
 
 }
