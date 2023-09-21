@@ -65,7 +65,8 @@ export class ChartlineComponent {
     'price',
     'deadline',
     'pic',
-    'last update'
+    'last update',
+    'days remaining'
   ]
 
 

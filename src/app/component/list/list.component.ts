@@ -27,7 +27,12 @@ export class ListComponent implements OnInit {
     let locale = 'en-US'
     let options: object = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' }
 
-    return value.toLocaleDateString(locale,options)
+    return value.toLocaleDateString(locale, options)
+  }
+
+  daysRemaining(startDate: any, lastUpdate: any) {
+    let oneDay = 1_000 * 60 * 60 * 24
+    return Math.round(Math.abs(startDate - lastUpdate) / oneDay)
   }
 
 }

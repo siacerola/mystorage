@@ -68,6 +68,7 @@
         <td class="px-6 py-4">{{dateFormat(item.deadLine)}}</td>
         <td class="px-6 py-4 uppercase">{{item.PIC}}</td>
         <td class="px-6 py-4">{{dateFormat(item.lastUpdate)}}</td>
+        <td class="px-6 py-4">{{daysRemaining(item.deadLine,item.lastUpdate)}}{{' days'}}</td>
       </tr>
 
     </tbody>
