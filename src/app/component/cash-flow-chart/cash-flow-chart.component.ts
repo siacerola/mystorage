@@ -39,10 +39,10 @@ export class CashFlowChartComponent implements OnInit{
   @Input() colors: string = ''
 
   currency = (value: boolean): string[] => {
-    let located = 'en-US'
+    let located = 'id-ID'
     let option = {
       style: 'currency',
-      currency:'USD'
+      currency:'IDR'
     }
 
     let main

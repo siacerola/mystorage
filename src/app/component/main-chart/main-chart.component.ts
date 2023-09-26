@@ -7,7 +7,8 @@ import {
   ApexDataLabels,
   ApexStroke,
   ApexLegend,
-  ApexGrid
+  ApexGrid,
+  ApexFill
 } from 'ng-apexcharts'
 
 export type ChartOptions = {
@@ -18,6 +19,7 @@ export type ChartOptions = {
   legend: ApexLegend
   grid:ApexGrid
   dataLabels:ApexDataLabels
+  fill:ApexFill
 };
 
 @Component({
@@ -39,9 +41,16 @@ export class MainChartComponent {
           data: [10, 20, 15, 18, 23, 47, 31, 56, 61]
         }
       ],
+      fill:{
+        type:"solid"
+      },
+      stroke:{
+        curve:"stepline",
+        width:5
+      },
       chart: {
         height: 350,
-        type: "area",
+        type: "line",
         toolbar: {
           show:false
         }
