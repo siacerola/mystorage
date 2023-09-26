@@ -22,10 +22,23 @@
     <div class="gap-4 grid grid-flow-row grid-cols-4">
       <!-- row 2 -->
       <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
-        <app-main-chart></app-main-chart>
+        <div>
+          <app-main-chart></app-main-chart>
+        </div>
+
       </div>
-      <div class="col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
-        <app-pie-chart></app-pie-chart>
+      <div class=" col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
+        <div class=" flex flex-col w-full h-full">
+          <div class="flex w-full justify-start items-start">
+            <app-heading [title]="'Product Sales'"></app-heading>
+          </div>
+          <div class="flex items-center justify-center w-full h-full">
+            <app-pie-chart ></app-pie-chart>
+          </div>
+        </div>
+
+
+
       </div>
       <!-- end row 2 -->
 

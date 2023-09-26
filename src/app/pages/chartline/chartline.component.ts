@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RandomGenerator } from 'src/app/formatting/random.format';
 import { SalesOrder } from 'src/app/model/SalesOrder.model';
-import { DateFormat } from 'src/app/formatting/date.format';
 
 @Component({
   selector: 'app-chartline',
