@@ -42,15 +42,16 @@ export class MainChartComponent {
         }
       ],
       fill:{
-        type:"solid"
+        type:"gradient"
       },
       stroke:{
-        curve:"stepline",
+        curve:"smooth",
         width:5
       },
       chart: {
-        height: 350,
-        type: "line",
+        width:"100%",
+        height: "300",
+        type: "area",
         toolbar: {
           show:false
         }
