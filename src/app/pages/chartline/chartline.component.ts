@@ -60,15 +60,15 @@ export class ChartlineComponent {
 
   // header table
   headerList: string[] = [
-    'no so',
-    'customer',
-    'product',
-    'status',
-    'price',
-    'deadline',
-    'pic',
-    'last update',
-    'days remaining'
+    'SO',
+    'Customer',
+    'Product',
+    'Status',
+    'Price',
+    'Deadline',
+    'PIC',
+    'Last update',
+    'Days remaining'
   ]
 
 
