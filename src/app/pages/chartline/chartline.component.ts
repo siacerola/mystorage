@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RandomGenerator } from 'src/app/formatting/random.format';
 import { SalesOrder } from 'src/app/model/SalesOrder.model';
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chartline',
@@ -11,13 +12,15 @@ export class ChartlineComponent {
 
   list = [1, 2, 3, 4]
 
+  faElipseVertical =faEllipsisVertical
+
   revenue: RandomGenerator = new RandomGenerator({
     icon: 0,
     title: 'revenue',
     nominal: 100_000,
     gain: 11,
     currency: true,
-    color: '#22c55e'
+    color: '#3b82f6'
   })
 
   profit: RandomGenerator = new RandomGenerator({
@@ -35,7 +38,7 @@ export class ChartlineComponent {
     nominal: 44_000,
     gain: 2,
     currency: false,
-    color: '#a855f7'
+    color: '#3b82f6'
   })
 
   order: RandomGenerator = new RandomGenerator({
@@ -44,7 +47,7 @@ export class ChartlineComponent {
     nominal: 12_000,
     gain: 7,
     currency: false,
-    color: '#ef4444'
+    color: '#3b82f6'
   })
 
   listCard: RandomGenerator[] = [
@@ -76,7 +79,7 @@ export class ChartlineComponent {
     'laser',
     22_000_000,
     new Date(2023, 10, 12),
-    'aris setiawan',
+    'aris s',
     new Date(2023, 9, 15)
   )
 
@@ -87,7 +90,7 @@ export class ChartlineComponent {
     'bending',
     536_000,
     new Date(2023,9,9),
-    'aris setiawan',
+    'aris s',
     new Date(2023,8,12)
   )
 
@@ -98,7 +101,7 @@ export class ChartlineComponent {
     'welding',
     27_750_000,
     new Date(2023,5,19),
-    'aris setiawan',
+    'aris s',
     new Date(2023,4,26)
   )
 
@@ -109,7 +112,7 @@ export class ChartlineComponent {
     'assembling',
     27_750_000,
     new Date(2023,5,19),
-    'aris setiawan',
+    'aris s',
     new Date(2023,4,26)
   )
 
@@ -120,7 +123,7 @@ export class ChartlineComponent {
     'painting',
     27_750_000,
     new Date(2023,5,19),
-    'aris setiawan',
+    'aris s',
     new Date(2023,4,26)
   )
 

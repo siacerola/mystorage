@@ -23,9 +23,11 @@
       <!-- row 2 -->
       <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
         <div class=" flex flex-col w-full h-full">
-          <div class="flex w-full justify-start items-start pl-4">
-            <app-heading [title]="'Overall Sales'"></app-heading>
-          </div>
+
+            <div class="flex justify-start items-start pl-4">
+              <app-heading [title]="'Overall Sales'"></app-heading>
+            </div>
+
           <div class="p-4">
             <app-main-chart class="w-fit"></app-main-chart>
           </div>
@@ -51,10 +53,17 @@
       <!-- row 3 -->
       <div class=" col-span-4 row-span-1 p-4 shadow rounded-lg border bg-white">
         <div class="flex flex-col w-full h-full">
-          <div class="flex w-full justify-start items-center pl-4">
-            <app-heading [title]="'Loading Control Produksi'"></app-heading>
+          <div class="flex flex-row w-full justify-between">
+            <div class="flex items-center pl-4">
+              <app-heading [title]="'Loading Control Produksi'"></app-heading>
+            </div>
+            <div class="flex p-4">
+              <button type="button" class="w-28 py-2.5 border rounded-lg bg-blue-500 text-slate-100 hover:bg-blue-400">See more</button>
+              <!-- <fa-icon [icon]="faElipseVertical" class="text-gray-900"></fa-icon> -->
+            </div>
           </div>
-          <div class="flex items-center justify-center w-full h-full p-4">
+
+          <div class="p-4 w-full h-full">
             <app-list [headerList]="headerList" [list]="listSO"></app-list>
           </div>
         </div>

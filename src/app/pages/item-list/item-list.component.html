@@ -43,7 +43,7 @@
         <tr>
           <th scope="col" class="p-4">
             <div class="flex items-center">
-              <input type="checkbox" class="w-4 h-4 rounded focus:ring-2">
+              <input type="checkbox" class="w-4 h-4 rounded focus:ring-2" aria-label="checkall">
             </div>
           </th>
           <th scope="col" class="px-6 py-3">Item name</th>
@@ -62,7 +62,7 @@
         <tr *ngFor="let item of itemList" class="bg-white border-b hover:bg-gray-50">
           <td class="w-4 p-4">
             <div class="flex items-center">
-              <input type="checkbox" class="w-4 h-4 rounded focus:ring-2">
+              <input type="checkbox" class="w-4 h-4 rounded focus:ring-2" aria-label="check">
             </div>
           </td>
           <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-gray-900 uppercase">{{item.itemName}}</th>

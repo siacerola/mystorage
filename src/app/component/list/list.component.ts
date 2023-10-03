@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SalesOrder } from 'src/app/model/SalesOrder.model';
+import { faSort } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-list',
@@ -9,6 +10,8 @@ import { SalesOrder } from 'src/app/model/SalesOrder.model';
 export class ListComponent implements OnInit {
   @Input() headerList: string[] = []
   @Input() list: SalesOrder[] = []
+
+  faSort=faSort
 
   ngOnInit(): void {
   }
