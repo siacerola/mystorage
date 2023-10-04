@@ -8,7 +8,8 @@ import {
   ApexStroke,
   ApexLegend,
   ApexGrid,
-  ApexFill
+  ApexFill,
+  ApexYAxis
 } from 'ng-apexcharts'
 
 export type ChartOptions = {
@@ -21,6 +22,7 @@ export type ChartOptions = {
   dataLabels:ApexDataLabels
   fill:ApexFill
   colors:string[]
+  yaxis:ApexYAxis
 };
 
 @Component({
@@ -50,22 +52,49 @@ export class MainChartComponent {
         curve:"smooth",
         width:5
       },
+      legend:{
+        show:true,
+        position:'bottom',
+        showForSingleSeries:true,
+        horizontalAlign:'center',
+        fontSize:'16px',
+        itemMargin:{
+          vertical:24
+        }
+      },
       chart: {
         width:"100%",
-        height: "300",
+        height: '350',
         type: "area",
         toolbar: {
           show:false
         }
       },
       dataLabels: {
-        enabled:false
+        enabled:true
       },
       grid: {
-        show:false
+        show:true,
+        borderColor:'#f1f5f9',
+        xaxis:{
+          lines:{
+            show:true
+          }
+        },
+        yaxis:{
+          lines:{
+            show:false
+          }
+        }
       },
       xaxis: {
-        categories:[2014, 2015,  2016,  2017,  2018,  2019,  2020,  2021, 2022]
+        categories:[2014, 2015,  2016,  2017,  2018,  2019,  2020,  2021, 2022],
+        tickAmount:5,
+      },
+      yaxis:{
+        show:true,
+        tickAmount:2,
+        opposite:false
       }
     }
   }

@@ -24,24 +24,38 @@
       <div class="col-span-3 row-span-1 ">
         <div class=" flex flex-col w-full h-full">
 
-            <div class="flex justify-start items-start py-4">
+            <div class="inline-flex items-center justify-between py-4">
               <app-heading [title]="'Overall Sales'" class="text-2xl"></app-heading>
+              <span class="text-slate-500 text-lg">March 2023 - October 2023</span>
+              <button type="button" title="range" class="text-center items-center inline-flex font-medium py-2.5 px-5 justify-between shadow-sm shadow-transparent text-blue-400 bg-white rounded-lg hover:bg-blue-400 hover:text-slate-100">
+                <fa-icon [icon]="faCalendar" [fixedWidth]="true" class="mr-2"></fa-icon>
+                <span>Yearly</span>
+                <fa-icon [icon]="faChevronDown" [fixedWidth]="true" class="ml-2"></fa-icon>
+              </button>
+
             </div>
 
-          <div class="rounded-xl bg-white shadow-sm shadow-transparent">
+          <div class=" rounded-xl bg-white shadow-sm shadow-transparent h-full pt-4 justify-center items-center">
             <app-main-chart class="w-fit"></app-main-chart>
           </div>
 
         </div>
 
       </div>
+
       <div class="col-span-1 row-span-1">
         <div class="flex flex-col w-full h-full">
-          <div class="flex py-4 w-full justify-start items-center">
+
+          <div class="inline-flex py-4 w-full justify-between items-center">
             <app-heading [title]="'Completed SO'" class="text-2xl"></app-heading>
+            <button type="button" class="text-slate-500 font-medium rounded-lg px-5 py-2.5 hover:bg-white" title="more">
+              <fa-icon [icon]="faEllipsis"></fa-icon>
+            </button>
+
           </div>
 
-          <div class="flex flex-col w-full h-full justify-between p-4 shadow-sm shadow-transparent rounded-xl bg-white">
+
+          <div class="flex flex-col w-full h-full justify-between py-4 px-8 shadow-sm shadow-transparent rounded-xl bg-white">
             <div *ngFor="let item of listSO">
               <app-progress-bar [title]="item.numberSO"></app-progress-bar>
             </div>

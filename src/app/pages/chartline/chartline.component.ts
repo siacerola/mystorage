@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RandomGenerator } from 'src/app/formatting/random.format';
 import { SalesOrder } from 'src/app/model/SalesOrder.model';
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical,faEllipsis ,faCalendar,faChevronDown} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chartline',
@@ -13,6 +13,9 @@ export class ChartlineComponent {
   list = [1, 2, 3, 4]
 
   faElipseVertical =faEllipsisVertical
+  faEllipsis=faEllipsis
+  faCalendar=faCalendar
+  faChevronDown=faChevronDown
 
   revenue: RandomGenerator = new RandomGenerator({
     icon: 0,
