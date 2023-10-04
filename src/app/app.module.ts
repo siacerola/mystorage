@@ -22,6 +22,7 @@ import { CashFlowChartComponent } from './component/cash-flow-chart/cash-flow-ch
 import { LineChartComponent } from './component/line-chart/line-chart.component';
 import { PieChartComponent } from './component/pie-chart/pie-chart.component';
 import { ListComponent } from './component/list/list.component';
+import { ProgressBarComponent } from './component/progress-bar/progress-bar.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ListComponent } from './component/list/list.component';
     CashFlowChartComponent,
     LineChartComponent,
     PieChartComponent,
-    ListComponent
+    ListComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
