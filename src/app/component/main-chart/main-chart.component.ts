@@ -20,6 +20,7 @@ export type ChartOptions = {
   grid:ApexGrid
   dataLabels:ApexDataLabels
   fill:ApexFill
+  colors:string[]
 };
 
 @Component({
@@ -41,6 +42,7 @@ export class MainChartComponent {
           data: [10, 20, 15, 18, 23, 47, 31, 56, 61]
         }
       ],
+      colors:['#60a5fa'],
       fill:{
         type:"gradient"
       },

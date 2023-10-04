@@ -1,10 +1,10 @@
 <div class="mt-16 items-center">
 
-  <div class="gap-4 grid">
+  <div class="gap-6 grid">
     <!-- row 1 -->
-    <div class="gap-4 grid grid-rows-1 grid-cols-4">
+    <div class="gap-6 grid grid-rows-1 grid-cols-4">
       <div *ngFor="let item of listCard">
-        <div class="col-span-1 row-span-1 p-4 shadow-sm rounded-lg bg-white">
+        <div class="col-span-1 row-span-1 p-4 shadow-sm shadow-transparent rounded-xl bg-white">
           <app-cash-flow-chart
             [ic]="item.icon"
             [title]="item.title"
@@ -19,30 +19,34 @@
     <!-- end row 1 -->
 
     <!-- row 2 - 3-->
-    <div class="gap-4 grid grid-flow-row grid-cols-4">
+    <div class="gap-6 grid grid-flow-row grid-cols-4">
       <!-- row 2 -->
-      <div class="col-span-3 row-span-1 p-4 shadow-sm rounded-lg bg-white">
+      <div class="col-span-3 row-span-1 ">
         <div class=" flex flex-col w-full h-full">
 
-            <div class="flex justify-start items-start pl-4">
-              <app-heading [title]="'Overall Sales'"></app-heading>
+            <div class="flex justify-start items-start py-4">
+              <app-heading [title]="'Overall Sales'" class="text-2xl"></app-heading>
             </div>
 
-          <div class="p-4">
+          <div class="rounded-xl bg-white shadow-sm shadow-transparent">
             <app-main-chart class="w-fit"></app-main-chart>
           </div>
 
         </div>
 
       </div>
-      <div class=" col-span-1 row-span-1 p-4 shadow-sm rounded-lg bg-white">
-        <div class=" flex flex-col w-full h-full">
-          <div class="flex w-full justify-start items-center">
-            <app-heading [title]="'Product Sales'"></app-heading>
+      <div class="col-span-1 row-span-1">
+        <div class="flex flex-col w-full h-full">
+          <div class="flex py-4 w-full justify-start items-center">
+            <app-heading [title]="'Completed SO'" class="text-2xl"></app-heading>
           </div>
-          <div class="flex items-center justify-center w-full h-full">
-            <app-pie-chart ></app-pie-chart>
+
+          <div class="flex flex-col w-full h-full justify-between p-4 shadow-sm shadow-transparent rounded-xl bg-white">
+            <div *ngFor="let item of listSO">
+              <app-progress-bar [title]="item.numberSO"></app-progress-bar>
+            </div>
           </div>
+
         </div>
 
 
@@ -51,24 +55,16 @@
       <!-- end row 2 -->
 
       <!-- row 3 -->
-      <div class=" col-span-4 row-span-1 p-4 shadow-sm shadow-slate-500 rounded-lg bg-white">
-        <div class="flex flex-col w-full h-full">
+      <div class=" col-span-4 row-span-1">
+        <div class="flex flex-col w-full">
           <div class="flex flex-row w-full justify-between">
-            <div class="flex items-center pl-4">
-              <app-heading [title]="'Loading Control Produksi'"></app-heading>
+            <div class="flex items-center py-4">
+              <app-heading [title]="'Loading Control Produksi'" class="text-2xl"></app-heading>
             </div>
-            <div class="flex px-4">
-              <button type="button" class="w-28 py-2.5 shadow-sm rounded-lg bg-blue-400 text-slate-100 hover:bg-blue-500">See more</button>
-              <!-- <fa-icon [icon]="faElipseVertical" class="text-gray-900"></fa-icon> -->
-            </div>
-          </div>
-
-          <div class="p-4 w-full h-full">
-            <app-list [headerList]="headerList" [list]="listSO"></app-list>
+            <button type="button" class="font-semibold w-28 h-fit py-2.5 shadow-sm shadow-transparent rounded-xl bg-white text-blue-400 hover:bg-blue-400 hover:text-slate-100">See more</button>
           </div>
         </div>
-
-
+          <app-list [headerList]="headerList" [list]="listSO"></app-list>
 
       </div>
 

@@ -1,8 +1,8 @@
-<div class="relative overflow-x-auto">
-  <table class="border-separate border-spacing-y-2 w-full text-sm text-left">
+<div class="relative overflow-x-auto rounded-xl shadow-sm">
+  <table class="border-spacing-y-1 w-full text-sm text-left ">
     <!-- table head -->
     <thead class="">
-      <tr class="border-b text-xs text-slate-100 bg-blue-400">
+      <tr class="shadow-sm text-xs text-slate-100 bg-blue-400">
         <th scope="col" class="p-4">
           <div class="flex items-center text-center">
             <input id="checkall" type="checkbox" class="w-4 h-4 rounded focus:ring-2" aria-label="checkall">
@@ -24,7 +24,7 @@
     <!-- tble body -->
     <tbody>
       <tr *ngFor="let item of list; let i=index"
-      class="text-slate-500 bg-white border-b shadow-lg hover:bg-blue-50"
+      class="text-slate-600 border-b border-slate-100 bg-white hover:bg-blue-50"
       >
         <td class="w-4 p-4">
           <div class="flex items-center">
