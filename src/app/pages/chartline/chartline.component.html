@@ -4,7 +4,7 @@
     <!-- row 1 -->
     <div class="gap-4 grid grid-rows-1 grid-cols-4">
       <div *ngFor="let item of listCard">
-        <div class="col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
+        <div class="col-span-1 row-span-1 p-4 shadow-sm rounded-lg bg-white">
           <app-cash-flow-chart
             [ic]="item.icon"
             [title]="item.title"
@@ -21,7 +21,7 @@
     <!-- row 2 - 3-->
     <div class="gap-4 grid grid-flow-row grid-cols-4">
       <!-- row 2 -->
-      <div class="col-span-3 row-span-1 p-4 shadow rounded-lg border bg-white">
+      <div class="col-span-3 row-span-1 p-4 shadow-sm rounded-lg bg-white">
         <div class=" flex flex-col w-full h-full">
 
             <div class="flex justify-start items-start pl-4">
@@ -35,7 +35,7 @@
         </div>
 
       </div>
-      <div class=" col-span-1 row-span-1 p-4 shadow rounded-lg border bg-white">
+      <div class=" col-span-1 row-span-1 p-4 shadow-sm rounded-lg bg-white">
         <div class=" flex flex-col w-full h-full">
           <div class="flex w-full justify-start items-center">
             <app-heading [title]="'Product Sales'"></app-heading>
@@ -51,14 +51,14 @@
       <!-- end row 2 -->
 
       <!-- row 3 -->
-      <div class=" col-span-4 row-span-1 p-4 shadow rounded-lg border bg-white">
+      <div class=" col-span-4 row-span-1 p-4 shadow-sm shadow-slate-500 rounded-lg bg-white">
         <div class="flex flex-col w-full h-full">
           <div class="flex flex-row w-full justify-between">
             <div class="flex items-center pl-4">
               <app-heading [title]="'Loading Control Produksi'"></app-heading>
             </div>
             <div class="flex px-4">
-              <button type="button" class="w-28 py-2.5 border rounded-lg bg-blue-500 text-slate-100 hover:bg-blue-400">See more</button>
+              <button type="button" class="w-28 py-2.5 shadow-sm rounded-lg bg-blue-400 text-slate-100 hover:bg-blue-500">See more</button>
               <!-- <fa-icon [icon]="faElipseVertical" class="text-gray-900"></fa-icon> -->
             </div>
           </div>

@@ -1,12 +1,12 @@
-<aside class="w-64 fixed top-0 left-0 z-40 h-screen pt-14 transition-transform shadow bg-white" aria-label="Sidebar">
+<aside class="w-64 fixed top-0 left-0 z-40 h-screen pt-14 transition-transform shadow-sm bg-white" aria-label="Sidebar">
   <div class="h-full p-4 overflow-y-auto">
     <ul class="space-y-2 font-medium">
       <li>
         <a routerLink="dashboard/summary"
         routerLinkActive="active"
-        class="flex items-center w-full py-2 text-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-500">
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
           <fa-icon [icon]="faChartPie" [fixedWidth]="true" class="mx-2"></fa-icon>
-          <span class="text-gray-900">Dashboard</span>
+          <span class="">Dashboard</span>
         </a>
       </li>
 
@@ -14,26 +14,26 @@
         <button
         type="button"
         (click)="dropdown()"
-        class="flex items-center w-full py-2 text-base text-blue-600 transition duration-75 rounded-lg group hover:bg-slate-100 hover:text-blue-500">
+        class="flex items-center w-full py-2 text-base text-slate-400 transition duration-75 rounded-lg group hover:bg-blue-400 hover:text-slate-100">
           <fa-icon [icon]="faScrewdriverWrench" [fixedWidth]="true" class="mx-2"></fa-icon>
-          <span class="text-gray-900">Tools Management</span>
+          <span class="">Tools Management</span>
           <fa-icon [icon]="faChevronDown" [fixedWidth]="true" class="mx-2"></fa-icon>
         </button>
         <ul class="py-2 space-y-2 ml-9" *ngIf="status">
           <li>
             <a routerLink="dashboard/item-list"
             routerLinkActive="active"
-            class="flex items-center w-full py-2 text-blue-500 duration-75 rounded-lg group hover:bg-slate-100 hover:text-blue-500">
+            class="flex items-center w-full py-2 text-slate-400 duration-75 rounded-lg group hover:bg-blue-400 hover:text-slate-100">
               <fa-icon [icon]="faRetweet" [fixedWidth]="true" class="mx-2"></fa-icon>
-              <span class="text-gray-900">Rental</span>
+              <span class="">Rental</span>
             </a>
           </li>
           <li>
             <a routerLink="dashboard/item-list"
             routerLinkActive="active"
-            class="flex items-center w-full py-2 text-blue-600 transition duration-75 rounded-lg group hover:bg-slate-100 hover:text-blue-500">
+            class="flex items-center w-full py-2 text-slate-400 transition duration-75 rounded-lg group hover:bg-blue-400 hover:text-slate-100">
               <fa-icon [icon]="faListUl" [fixedWidth]="true" class="mx-2"></fa-icon>
-              <span class="text-gray-900">Item</span>
+              <span class="">Item</span>
             </a>
           </li>
         </ul>
@@ -42,18 +42,18 @@
       <li>
         <a routerLink="dashboard/item-list"
         routerLinkActive="active"
-        class="flex items-center w-full py-2 text-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-500">
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
           <fa-icon [icon]="faHeadset" [fixedWidth]="true" class="mx-2"></fa-icon>
-          <span class="text-gray-900">Customer Center</span>
+          <span class="">Customer Center</span>
         </a>
       </li>
 
       <li>
         <a routerLink="dashboard/item-list"
         routerLinkActive="active"
-        class="flex items-center w-full py-2 text-blue-500 rounded-lg hover:bg-slate-100 hover:text-blue-500">
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
           <fa-icon [icon]="faGears" [fixedWidth]="true" class="mx-2"></fa-icon>
-          <span class="text-gray-900">Settings</span>
+          <span class="">Settings</span>
         </a>
       </li>
     </ul>

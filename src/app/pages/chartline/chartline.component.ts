@@ -20,7 +20,7 @@ export class ChartlineComponent {
     nominal: 100_000,
     gain: 11,
     currency: true,
-    color: '#3b82f6'
+    color: '#60a5fa'
   })
 
   profit: RandomGenerator = new RandomGenerator({
@@ -29,7 +29,7 @@ export class ChartlineComponent {
     nominal: 50_000,
     gain: 4,
     currency: true,
-    color: '#3b82f6'
+    color: '#60a5fa'
   })
 
   customer: RandomGenerator = new RandomGenerator({
@@ -38,7 +38,7 @@ export class ChartlineComponent {
     nominal: 44_000,
     gain: 2,
     currency: false,
-    color: '#3b82f6'
+    color: '#60a5fa'
   })
 
   order: RandomGenerator = new RandomGenerator({
@@ -47,7 +47,7 @@ export class ChartlineComponent {
     nominal: 12_000,
     gain: 7,
     currency: false,
-    color: '#3b82f6'
+    color: '#60a5fa'
   })
 
   listCard: RandomGenerator[] = [
