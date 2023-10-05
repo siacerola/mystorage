@@ -1,6 +1,18 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { faChartPie, faChevronDown, faGears, faHeadset, faListUl, faRetweet, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChartPie,
+  faChevronDown,
+  faGears,
+  faHeadset,
+  faListUl,
+  faRetweet,
+  faScrewdriverWrench,
+  faBoxesStacked,
+  faCompass,
+  faUserGroup,
+  faClipboard
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,6 +30,10 @@ export class SidebarComponent {
   faListUl = faListUl
   faHeadset = faHeadset
   faGears=faGears
+  faBoxesStacked=faBoxesStacked
+  faCompass=faCompass
+  faUserGroup=faUserGroup
+  faClipboard=faClipboard
 
   status: boolean = false
 

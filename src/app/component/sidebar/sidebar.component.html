@@ -1,5 +1,5 @@
-<aside class="w-64 fixed top-0 left-0 z-40 h-screen pt-16 transition-transform shadow-sm bg-white" aria-label="Sidebar">
-  <div class="h-full p-4 overflow-y-auto">
+<aside class=" w-64 fixed top-0 left-0 z-40 h-screen pt-16 transition-transform shadow-sm bg-white" aria-label="Sidebar">
+  <div class="flex flex-col h-full p-4 overflow-y-auto justify-between">
     <ul class="space-y-2 font-medium">
       <li>
         <a routerLink="dashboard/summary"
@@ -11,36 +11,54 @@
       </li>
 
       <li>
-        <button
-        type="button"
-        (click)="dropdown()"
-        class="flex items-center w-full py-2 text-base text-slate-400 transition duration-75 rounded-lg group hover:bg-blue-400 hover:text-slate-100">
-          <fa-icon [icon]="faScrewdriverWrench" [fixedWidth]="true" class="mx-2"></fa-icon>
-          <span class="">Tools Management</span>
-          <fa-icon [icon]="faChevronDown" [fixedWidth]="true" class="mx-2"></fa-icon>
-        </button>
-        <ul class="py-2 space-y-2 ml-9" *ngIf="status">
-          <li>
-            <a routerLink="dashboard/item-list"
-            routerLinkActive="active"
-            class="flex items-center w-full py-2 text-slate-400 duration-75 rounded-lg group hover:bg-blue-400 hover:text-slate-100">
-              <fa-icon [icon]="faRetweet" [fixedWidth]="true" class="mx-2"></fa-icon>
-              <span class="">Rental</span>
-            </a>
-          </li>
-          <li>
-            <a routerLink="dashboard/item-list"
-            routerLinkActive="active"
-            class="flex items-center w-full py-2 text-slate-400 transition duration-75 rounded-lg group hover:bg-blue-400 hover:text-slate-100">
-              <fa-icon [icon]="faListUl" [fixedWidth]="true" class="mx-2"></fa-icon>
-              <span class="">Item</span>
-            </a>
-          </li>
-        </ul>
+        <a
+        routerLinkActive="active"
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
+          <fa-icon [icon]="faRetweet" [fixedWidth]="true" class="mx-2"></fa-icon>
+          <span class="">Purchasing</span>
+        </a>
       </li>
 
       <li>
-        <a routerLink="dashboard/item-list"
+        <a
+        routerLinkActive="active"
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
+          <fa-icon [icon]="faCompass" [fixedWidth]="true" class="mx-2"></fa-icon>
+          <span class="">Tracking Tools</span>
+        </a>
+      </li>
+
+      <li>
+        <a
+        routerLinkActive="active"
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
+          <fa-icon [icon]="faBoxesStacked" [fixedWidth]="true" class="mx-2"></fa-icon>
+          <span class="">Inventory</span>
+        </a>
+      </li>
+
+      <li>
+        <a
+        routerLinkActive="active"
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
+          <fa-icon [icon]="faUserGroup" [fixedWidth]="true" class="mx-2"></fa-icon>
+          <span class="">Customer</span>
+        </a>
+      </li>
+
+      <li>
+        <a
+        routerLinkActive="active"
+        class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
+          <fa-icon [icon]="faClipboard" [fixedWidth]="true" class="mx-2"></fa-icon>
+          <span class="">Report</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="space-y-2 pt-4 mt-4 font-medium border-t border-slate-400">
+      <li>
+        <a
         routerLinkActive="active"
         class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
           <fa-icon [icon]="faHeadset" [fixedWidth]="true" class="mx-2"></fa-icon>
@@ -49,7 +67,7 @@
       </li>
 
       <li>
-        <a routerLink="dashboard/item-list"
+        <a
         routerLinkActive="active"
         class="flex items-center w-full py-2 text-slate-400 rounded-lg hover:bg-blue-400 hover:text-slate-100">
           <fa-icon [icon]="faGears" [fixedWidth]="true" class="mx-2"></fa-icon>
@@ -57,5 +75,6 @@
         </a>
       </li>
     </ul>
+
   </div>
 </aside>
