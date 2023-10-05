@@ -1,1 +1,24 @@
-<p>purchasing works!</p>
+<div class="mt-16 items-center">
+
+  <div class="flex flex-col w-full bg-slate-100">
+    <!-- header -->
+    <div class="flex items-center py-4 w-full">
+      <app-heading [title]="'Add Purchase Spare Part'" class="text-2xl text-slate-500 font-semibold"></app-heading>
+    </div>
+
+    <div class="flex flex-col w-full h-full justify-between py-4 px-8 shadow-sm shadow-transparent rounded-xl bg-white">
+      <!-- sub header -->
+      <div>
+        <app-heading [title]="'Spare Part Information'" class="text-xl text-slate-400 font-medium"></app-heading>
+      </div>
+
+      <form>
+        <div class="grid grid-cols-2 gap-6 mb-6">
+          <app-single-form-input [label]="'Spare Part Name'"></app-single-form-input>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
