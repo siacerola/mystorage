@@ -31,6 +31,7 @@ export class LoginComponent {
       this.router.navigate(['/dashboard/summary'])
       console.log(value);
     } else {
+      this.router.navigate(['']);
       console.log(this.loginForm.valid);
       console.log(value);
     }
