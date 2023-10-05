@@ -14,12 +14,12 @@ import { ItemListComponent } from './pages/item-list/item-list.component';
 import { HeadingComponent } from './component/heading/heading.component';
 import { SettingComponent } from './pages/setting/setting.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ThreeLineChartComponent } from './component/three-line-chart/three-line-chart.component';
 import { MainChartComponent } from './component/main-chart/main-chart.component';
 import { CashFlowChartComponent } from './component/cash-flow-chart/cash-flow-chart.component';
 import { LineChartComponent } from './component/line-chart/line-chart.component';
 import { ListComponent } from './component/list/list.component';
 import { ProgressBarComponent } from './component/progress-bar/progress-bar.component';
+import { PurchasingComponent } from './pages/purchasing/purchasing.component';
 
 
 @NgModule({
@@ -33,12 +33,12 @@ import { ProgressBarComponent } from './component/progress-bar/progress-bar.comp
     ItemListComponent,
     HeadingComponent,
     SettingComponent,
-    ThreeLineChartComponent,
     MainChartComponent,
     CashFlowChartComponent,
     LineChartComponent,
     ListComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    PurchasingComponent
   ],
   imports: [
     BrowserModule,
