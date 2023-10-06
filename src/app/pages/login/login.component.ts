@@ -28,7 +28,7 @@ export class LoginComponent {
       console.log(this.loginForm.value.email);
       console.log(this.loginForm.value.password);
       this.newItemEvent.emit(value)
-      this.router.navigate(['/dashboard/summary'])
+      this.router.navigate(['/dashboard/purchasing'])
       console.log(value);
     } else {
       this.router.navigate(['']);

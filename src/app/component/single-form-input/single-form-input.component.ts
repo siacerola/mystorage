@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SingleFormInputComponent {
   @Input() label:string='title'
+  @Input() id:string=''
+  @Input() placeholder:string=''
 
 }
