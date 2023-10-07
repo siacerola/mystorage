@@ -7,16 +7,25 @@
     </div>
 
     <div class="flex flex-col w-full h-full justify-between p-4 shadow-sm shadow-transparent rounded-xl bg-white">
-      <!-- sub header -->
-      <div class="pb-4 border-b border-slate-300">
+      <!-- sub header - Item Information -->
+      <div class="pb-4 border-b border-slate-300 ">
         <app-heading [title]="'Item Information'" class="text-xl text-slate-400 font-medium"></app-heading>
       </div>
 
       <form>
         <div class="grid grid-cols-2 gap-6 p-4">
           <app-single-form-input [label]="'Name of Item'" [placeholder]="'item name'" [id]="'item_name'"></app-single-form-input>
-          <app-single-form-input [label]="'Serial Number'" [placeholder]="'Serial Number'" [id]="'serial_number'"></app-single-form-input>
+          <app-single-form-input [label]="'Category'" [placeholder]="'Category Item'" [id]="'category_item'"></app-single-form-input>
+          <div class="flex">
+            <div class="flex items-center mr-4">
+              <app-single-form-input [label]="'Condition'" [placeholder]="'Condition Item'" [id]="'category_item'" [type]="'radio'"></app-single-form-input>
+            </div>
+
+          </div>
+
         </div>
+
+
       </form>
 
     </div>

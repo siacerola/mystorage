@@ -20,6 +20,7 @@ import { ListComponent } from './component/list/list.component';
 import { ProgressBarComponent } from './component/progress-bar/progress-bar.component';
 import { PurchasingComponent } from './pages/purchasing/purchasing.component';
 import { SingleFormInputComponent } from './component/single-form-input/single-form-input.component';
+import { SingleRadioInputComponent } from './component/single-radio-input/single-radio-input.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { SingleFormInputComponent } from './component/single-form-input/single-f
     ListComponent,
     ProgressBarComponent,
     PurchasingComponent,
-    SingleFormInputComponent
+    SingleFormInputComponent,
+    SingleRadioInputComponent
   ],
   imports: [
     BrowserModule,

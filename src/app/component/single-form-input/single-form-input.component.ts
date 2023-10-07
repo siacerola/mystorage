@@ -9,5 +9,6 @@ export class SingleFormInputComponent {
   @Input() label:string='title'
   @Input() id:string=''
   @Input() placeholder:string=''
+  @Input() type:string='text'
 
 }
