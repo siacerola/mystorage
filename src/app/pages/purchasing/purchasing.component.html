@@ -16,11 +16,10 @@
         <div class="grid grid-cols-2 gap-6 p-4">
           <app-single-form-input [label]="'Name of Item'" [placeholder]="'item name'" [id]="'item_name'"></app-single-form-input>
           <app-single-form-input [label]="'Category'" [placeholder]="'Category Item'" [id]="'category_item'"></app-single-form-input>
-          <div class="flex">
-            <div class="flex items-center mr-4">
-              <app-single-form-input [label]="'Condition'" [placeholder]="'Condition Item'" [id]="'category_item'" [type]="'radio'"></app-single-form-input>
-            </div>
 
+          <div class="flex">
+              <app-single-radio-input [label]="'Fine'" [name]="'condition-item'" [placeholder]="'Fine Item'" [id]="'fine_item'"></app-single-radio-input>
+              <app-single-radio-input [label]="'Damaged'" [name]="'condition-item'" [placeholder]="'Damaged Item'" [id]="'damaged_item'"></app-single-radio-input>
           </div>
 
         </div>

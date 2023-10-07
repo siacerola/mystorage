@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-single-radio-input',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./single-radio-input.component.css']
 })
 export class SingleRadioInputComponent {
-
+  @Input() label:string='title'
+  @Input() id:string=''
+  @Input() placeholder:string=''
+  @Input() name:string=''
 }
