@@ -2,32 +2,156 @@
 
   <div class="flex flex-col w-full bg-slate-100">
     <!-- header -->
-    <div class="flex items-center py-4 w-full">
-      <app-heading [title]="'Add Purchase Item'" class="text-2xl text-slate-500 font-semibold"></app-heading>
+    <div class=" my-4 flex items-center w-full">
+      <app-heading [title]="'Add Purchase Item'" class="text-2xl text-slate-700 font-semibold"></app-heading>
     </div>
 
-    <div class="flex flex-col w-full h-full justify-between p-4 shadow-sm shadow-transparent rounded-xl bg-white">
-      <!-- sub header - Item Information -->
-      <div class="pb-4 border-b border-slate-300 ">
-        <app-heading [title]="'Item Information'" class="text-xl text-slate-400 font-medium"></app-heading>
-      </div>
 
-      <form>
-        <div class="grid grid-cols-2 gap-6 p-4">
-          <app-single-form-input [label]="'Name of Item'" [placeholder]="'item name'" [id]="'item_name'"></app-single-form-input>
-          <app-single-form-input [label]="'Category'" [placeholder]="'Category Item'" [id]="'category_item'"></app-single-form-input>
 
-          <div class="flex">
-              <app-single-radio-input [label]="'Fine'" [name]="'condition-item'" [placeholder]="'Fine Item'" [id]="'fine_item'"></app-single-radio-input>
-              <app-single-radio-input [label]="'Damaged'" [name]="'condition-item'" [placeholder]="'Damaged Item'" [id]="'damaged_item'"></app-single-radio-input>
+
+    <form>
+
+      <!-- group form 1 -->
+      <div
+        class="my-4 flex flex-col w-full h-full justify-between p-8 shadow-sm shadow-transparent rounded-xl bg-white">
+
+        <!-- sub header - Item Information -->
+        <div class="mb-4">
+          <app-heading [title]="'Item Information'" class="text-xl text-slate-700 font-medium"></app-heading>
+        </div>
+        <!-- detail information product -->
+        <div class="h-24">
+          <app-heading [title]="'fill information product details'"
+            class="text-lg font-thin text-slate-400 "></app-heading>
+        </div>
+
+        <!-- form group itemm information -->
+        <div class="flex flex-col">
+          <!-- form row 1 -->
+          <div class="flex flex-row">
+            <!-- label form row 1 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Nama Produk'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
+
+
+            <!-- input form row 1 -->
+            <div class="basis-3/4">
+              <div class="mb-6">
+                <app-single-form-input [id]="'product_name'" [placeholder]="'Nama Produk'"
+                  [label]="'product_name'"></app-single-form-input>
+              </div>
+            </div>
+          </div>
+
+          <!-- form row 2 -->
+          <div class="flex flex-row">
+            <!-- label form row 2 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Kategori'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
+
+
+            <!-- input form row 2 -->
+            <div class="basis-3/4">
+              <div class="mb-8">
+                <app-single-form-input [id]="'product_category'" [placeholder]="'kategori Produk'"
+                  [label]="'product_category'"></app-single-form-input>
+              </div>
+            </div>
           </div>
 
         </div>
+      </div>
+
+      <!-- group form 2 -->
+      <div
+        class="my-4 flex flex-col w-full h-full justify-between p-8 shadow-sm shadow-transparent rounded-xl bg-white">
+
+        <!-- sub header - Item Details -->
+        <div class="h-24">
+          <app-heading [title]="'Detail Produk'" class="text-xl text-slate-700 font-medium"></app-heading>
+        </div>
+
+        <!-- form group itemm details -->
+        <div class="flex flex-col">
+          <!-- form row 1 -->
+          <div class="flex flex-row">
+            <!-- label form row 1 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Kondisi'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
 
 
-      </form>
+            <!-- input form row 1 -->
+            <div class="basis-3/4">
+              <div class="mb-8">
+                <app-single-form-input [id]="'product_name'" [placeholder]="'name of product'"
+                  [label]="'product_name'"></app-single-form-input>
+              </div>
+            </div>
+          </div>
 
-    </div>
+          <!-- form row 2 -->
+          <div class="flex flex-row">
+            <!-- label form row 2 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Kondisi'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span
+                  class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
+
+
+            <!-- input form row 2 -->
+            <div class="basis-3/4">
+              <div class="mb-8">
+                <div class="flex flex-row gap-16 text-lg font-thin">
+                  <app-single-radio-input [label]="'Baru'" [id]="'kondisi_baru'" [placeholder]="'baru'"
+                    [name]="'kondisi'"></app-single-radio-input>
+                  <app-single-radio-input [label]="'Bekas'" [id]="'kondisi_bekas'" [placeholder]="'bekas'"
+                    [name]="'kondisi'"></app-single-radio-input>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- form row 3 -->
+          <div class="flex flex-row">
+            <!-- label form row 3 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Deskripsi Produk'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
+
+
+            <!-- input form row 3 -->
+            <div class="basis-3/4">
+              <div class="mb-6">
+                <app-single-form-input [id]="'deskripsi_produk'" [placeholder]="'Deskripsi Produk'"
+                  [label]="'deskripsi_produk'"></app-single-form-input>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </form>
 
   </div>
 </div>
