@@ -21,11 +21,11 @@
         </div>
         <!-- detail information product -->
         <div class="h-24">
-          <app-heading [title]="'isi informasi terkait seputar produk secara lengkap'"
+          <app-heading [title]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"
             class="text-lg font-thin text-slate-400 "></app-heading>
         </div>
 
-        <!-- form group itemm information -->
+        <!-- form group informasi produk -->
         <div class="flex flex-col">
           <!-- form row 1 -->
           <div class="flex flex-row">
@@ -74,36 +74,17 @@
       <div
         class="my-4 flex flex-col w-full h-full justify-between p-8 shadow-sm shadow-transparent rounded-xl bg-white">
 
-        <!-- sub header - Item Details -->
+        <!-- sub header - detail produk -->
         <div class="h-24">
           <app-heading [title]="'Detail Produk'" class="text-xl text-slate-700 font-medium"></app-heading>
         </div>
 
         <!-- form group itemm details -->
         <div class="flex flex-col">
+
           <!-- form row 1 -->
           <div class="flex flex-row">
             <!-- label form row 1 -->
-            <div class="basis-1/4">
-              <div class="flex flex-row items-center justify-start">
-                <app-heading [title]="'Kondisi'" class="text-xl text-slate-600 font-normal"></app-heading>
-                <span class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
-              </div>
-            </div>
-
-
-            <!-- input form row 1 -->
-            <div class="basis-3/4">
-              <div class="mb-8">
-                <app-single-form-input [id]="'product_name'" [placeholder]="'name of product'"
-                  [label]="'product_name'"></app-single-form-input>
-              </div>
-            </div>
-          </div>
-
-          <!-- form row 2 -->
-          <div class="flex flex-row">
-            <!-- label form row 2 -->
             <div class="basis-1/4">
               <div class="flex flex-row items-center justify-start">
                 <app-heading [title]="'Kondisi'" class="text-xl text-slate-600 font-normal"></app-heading>
@@ -127,9 +108,9 @@
             </div>
           </div>
 
-          <!-- form row 3 -->
+          <!-- form row 2 -->
           <div class="flex flex-row">
-            <!-- label form row 3 -->
+            <!-- label form row 2 -->
             <div class="basis-1/4">
               <div class="flex flex-row items-center justify-start">
                 <app-heading [title]="'Deskripsi Produk'" class="text-xl text-slate-600 font-normal"></app-heading>
@@ -138,17 +119,79 @@
             </div>
 
 
-            <!-- input form row 3 -->
+            <!-- input form row 2 -->
             <div class="basis-3/4">
               <div class="mb-6">
-                <app-single-form-input [id]="'deskripsi_produk'" [placeholder]="'Deskripsi Produk'"
-                  [label]="'deskripsi_produk'"></app-single-form-input>
+                <app-single-text-area></app-single-text-area>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!-- group form 3 -->
+      <div
+        class="my-4 flex flex-col w-full h-full justify-between p-8 shadow-sm shadow-transparent rounded-xl bg-white">
+
+        <!-- sub header - harga produk -->
+        <div class="h-24">
+          <app-heading [title]="'Harga'" class="text-xl text-slate-700 font-medium"></app-heading>
+        </div>
+
+        <!-- form group itemm details -->
+        <div class="flex flex-col">
+          <!-- form row 1 -->
+          <div class="flex flex-row">
+            <!-- label form row 1 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Harga Satuan'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
+
+
+            <!-- input form row 1 -->
+            <div class="basis-3/4">
+              <div class="mb-8">
+                <app-single-form-input [id]="'product_price'" [placeholder]="'Masukan Harga'"
+                  [label]="'product_price'"></app-single-form-input>
+              </div>
+            </div>
+          </div>
+
+          <!-- form row 2 -->
+          <div class="flex flex-row">
+            <!-- label form row 2 -->
+            <div class="basis-1/4">
+              <div class="flex flex-row items-center justify-start">
+                <app-heading [title]="'Jumlah Produk'" class="text-xl text-slate-600 font-normal"></app-heading>
+                <span
+                  class="mx-4 bg-red-100 text-red-700 text-base font-medium mr-2 px-2.5 py-0.5 rounded">Wajib</span>
+              </div>
+            </div>
+
+
+            <!-- input form row 2 -->
+            <div class="basis-3/4">
+              <div class="mb-8">
+                <app-single-form-input [label]="'product_quantity'" [id]="'product_quantity'" [placeholder]="'Masukkan Jumlah Produk'"></app-single-form-input>
+
               </div>
             </div>
           </div>
 
         </div>
       </div>
+
+        <div class="flex flex-row items-center justify-end">
+          <button type="button" class="border text-gray-600 bg-white focus:outline-none hover:bg-slate-100 focus:ring-4 focus:ring-slate-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Batal</button>
+          <button type="button" class="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Simpan</button>
+
+        </div>
 
 
     </form>
